@@ -21,6 +21,7 @@
       font-size: 105%;
     }
     body {
+      background-size: 1300px;
       width: 90%;
       margin: 0 auto;
       font-family: 'Playfair Display', serif;
@@ -46,12 +47,14 @@
     }
     main {
       padding: 10px;
+      background: #fff;
     }
     .cv {
       font-size: 90%;
     }
     @media (min-width: 990px) {
       body {
+        background: url('bg.jpeg') no-repeat 0 60vh;
         width: 990px;
         margin: 0 auto;
       }
@@ -75,6 +78,23 @@
         font-size: 80%;
         margin-top: 10px;
       }
+      .name {
+        position: relative;
+        padding-left: 75px;
+      }
+      .name::before {
+        content: '';
+        background: url('me.jpg') no-repeat;
+        position: absolute;
+        border-radius: 50px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 60px;
+        height: 60px;
+        background-size: 100px;
+        background-position: -19px -53px;
+      }
       .icon-credit {
         float: right;
       }
@@ -89,7 +109,7 @@
 <body>
   <main>
     <header>
-      <h1>George Brook</h1>
+      <h1 class="name">George Brook</h1>
     </header>
     <section class="links">
       <h2>Sites I have worked on</h2>
