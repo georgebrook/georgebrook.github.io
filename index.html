@@ -12,234 +12,264 @@
   <link rel="manifest" href="/manifest.json">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="theme-color" content="#ffffff">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116686049-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-116686049-1');
-  </script>
-
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Koulen&family=Libre+Baskerville&family=Roboto+Condensed&display=swap"
+    rel="stylesheet">
   <style>
     html,
     body {
       height: 100%;
       line-height: 1.5;
-      font-size: 105%;
     }
+
     body {
       width: 90%;
       margin: 0 auto;
-      font-family: 'Playfair Display', serif;
+      font-family: 'Libre Baskerville', serif;
     }
-    ::-moz-selection { background: #8df3d0; }
-    ::selection { background: #8df3d0; }
-    h1, h2, h3, h4, h5, h6 {
+
+    ::-moz-selection {
+      background: #8df3d0;
+    }
+
+    ::selection {
+      background: #8df3d0;
+    }
+
+    h2, h3, h4, h5, h6 {
       font-weight: 100;
+      font-family: 'Roboto Condensed', sans-serif;
     }
+
+    h1 {
+      font-family: 'Koulen', cursive;
+      margin-bottom: 40px;
+    }
+
+    h3 {
+      margin-bottom: 0;
+      margin-top: 30px;
+      font-style: italic;
+    }
+
+    h4 {
+      margin: 0;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
     a {
       position: relative;
+      font-weight: bold;
     }
-    a:link    { color: #009688; }
-    a:hover   { color: #171717; }
-    a:active  { color: #171717; }
-    a:visited { color: #767676; }
-    dd {
-      margin-left: 15px;
+
+    a:link {
+      color: #006a60;
     }
-    dt:not(:first-child) {
-      margin-top: 40px;
+
+    a:hover {
+      color: #171717;
     }
-    dl h1,
-    dl h2,
-    dl h3,
-    dl h4,
-    dl h5,
-    dl h6 {
-      margin-bottom: 0;
+
+    a:active {
+      color: #171717;
     }
-    dl h4 {
-      margin-top: 5px;
+
+    a:visited {
+      color: #767676;
     }
-    dl p {
-      margin-top: 2px;
-      margin-bottom: 10px;
+
+    li {
+      margin-bottom: 7px;
     }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    main {
-      padding: 10px;
-      background: #fff;
-    }
-    .cv {
-      font-size: 90%;
-    }
-    .name {
-      color: #000000;
-    }
+
     footer ul li {
       display: inline-block;
       margin-right: 5px;
       font-size: 25px;
     }
+
+    .name {
+      position: relative;
+      padding-left: 78px;
+      letter-spacing: 4px;
+      font-weight: 100;
+      line-height: 1;
+    }
+
+    .name::before {
+      content: '';
+      background: url('me.jpg') no-repeat;
+      position: absolute;
+      border-radius: 50px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 60px;
+      height: 60px;
+      background-size: 93px;
+      background-position: -25px -63px;
+    }
+
+    .sr-only {
+      border: 0 !important;
+      clip: rect(1px, 1px, 1px, 1px) !important;
+      -webkit-clip-path: inset(50%) !important;
+      clip-path: inset(50%) !important;
+      height: 1px !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      padding: 0 !important;
+      position: absolute !important;
+      width: 1px !important;
+      white-space: nowrap !important;
+    }
+
     @media (min-width: 990px) {
       body {
         width: 990px;
         margin: 0 auto;
       }
-      main {
+
+      .content {
         padding: 20px 50px;
         border: 1px solid #dddddd;
         border-top-width: 0;
         border-bottom-width: 0;
       }
-      main::after {
-        content: "";
-        clear: both;
-        display: table;
+
+      main {
+        display: flex;
       }
-      .links,
-      .cv {
-        width: 50%;
-        float: left;
+
+      section:first-child {
+        margin-right: 30px;
+        flex-basis: 100%;
       }
-      .cv {
-        font-size: 80%;
-        margin-top: 10px;
-      }
-      .name {
-        position: relative;
-        padding-left: 75px;
-      }
-      .name::before {
-        content: '';
-        background: url('me.jpg') no-repeat;
-        position: absolute;
-        border-radius: 50px;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 60px;
-        height: 60px;
-        background-size: 93px;
-        background-position: -25px -63px;
-      }
+
       footer ul {
-        float: left;
+        padding: 0;
       }
+
       .icon-credit {
-        float: right;
         margin-top: 30px;
-      }
-      header,
-      footer {
-        width: 100%;
-        float: left;
       }
     }
   </style>
 </head>
 <body>
+<div class="content">
+  <header>
+    <h1 class="name">George Brook</h1>
+  </header>
   <main>
-    <header>
-      <h1 class="name">George Brook</h1>
-      <img style="display: none;" src="me.jpg" alt="A hidden Picture of Me">
-    </header>
-    <section class="links">
-      <h2>Sites I have worked on</h2>
-      <ul>
-        <li><a href="https://www.visitbritain.com/">Visit Britain</a></li>
-        <li><a href="https://media.visitbritain.com/gb/en">Visit Britain Media Centre</a></li>
-        <li><a href="https://www.fca.org.uk/">Finacncial Conduct Authority</a></li>
-        <li><a href="https://www.fca.org.uk/insight">FCA Insight</a></li>
-        <li><a href="https://www.fca.org.uk/ppi/">FCA PPI</a></li>
-        <li><a href="https://thechampagnecompany.com">The Champagne Company</a></li>
-        <li><a href="https://www.jersey.com/">Visit Jersey</a></li>
-        <li><a href="https://business.jersey.com/">Visit Jersey Corporate</a></li>
-        <li><a href="https://www.nationalforest.org/">National Forest</a></li>
-        <li><a href="https://zoocha.com/">Zoocha Ltd</a></li>
-        <li><a href="https://www.countryside.co.uk/">Countryside</a></li>
-      </ul>
-      <h2>Little Things I have made</h2>
-      <ul>
-        <li><a href="https://codepen.io/georgebrook/full/mqexXB">Seamless CSS with background clip</a></li>
-        <li><a href="https://codepen.io/georgebrook/full/jrLXvP">CSS countdown</a></li>
-        <li><a href="https://codepen.io/georgebrook/full/EbxxgX">Parallax stars</a></li>
-        <li><a href="http://jsfiddle.net/georgebrook/x29r9/js/">My first JS thing, wierd little prompt game...</a></li>
-        <li><a href="https://codepen.io/georgebrook/full/MrdEbW">JS Diamond</a></li>
-        <li><a href="http://backtothehtml.com/">Back to the HTML...</a></li>
-        <li>Also making a <em>super secret</em> app</li>
-      </ul>
-    </section>
     <section class="cv">
-      <h2>About Me</h2>
-      <dl>
-        <dt><h3>Current Profile</h3></dt>
-        <dd>
-          <p>I’m a Front End Web Developer/Drupal Themer working in the heart of Hertford.</p>
-        </dd>
-        <dd>
-          <p>Technology is kinda cool. I have interests in making mobile applications with a couple of ideas in mind. I am always looking to improve my skills in Javascript if and when I have the time.</p>
-        </dd>
-        <dd>
-          <p>I like art and attempting to be creative, you can find some of my random drawings <a href="https://imgur.com/a/drf0g">here</a>.</p>
-        </dd>
-
-        <dt><h3>Education</h3></dt>
-        <dd>
+      <h2>Current Profile</h2>
+      <p>I’m a Front End web developer, music enthusiast and "quirky" guy, currently taking a break from the medium
+        screen.</p>
+      <p>I like art and attempting to be creative, you can find some of my random drawings <a
+        href="https://imgur.com/a/drf0g">here</a>.</p>
+      <h3>Web development Experience</h3>
+      <p>Front End web development and Drupal theming - 8+ years at <a target="_blank" href="https://zoocha.com/">Zoocha
+        Ltd</a></p>
+      <p>At Zoocha I learn't a lot working on a variety of different roles in this job but mostly Drupal Theming. I was
+        responsible for reviewing juniours code, mentoring new Front End developers, deploying releases and making
+        suggestions for solutions to complex issues.</p>
+      <p>Technology can be awesome, expecially when it empowers people for good. I have interests in making mobile
+        applications with a couple of ideas in mind. I am always looking to improve my skills in Javascript and the cool
+        frameworks out there, if and when I have the time.</p>
+      <h3>Skills</h3>
+      <p>HTML5, CSS3, JavaScript, git, PHP, Drupal, MySQL,Linux.</p>
+      <p>Experience with Adobe Suite products, Photoshop, Premiere Pro, Illustrator. Music production stuff with Logic
+        Pro X.</p>
+      <h3>Education</h3>
+      <ul>
+        <li>
           <h4>2009 - 2012: University of Bath BSc (Hons) Physics 2:1</h4>
-          <p>During the course of this degree I learnt a lot about the nature of science as a whole and how knowledge in the discipline of science and maths is something that can be used to better ourselves and help people.</p>
-          <p>Dissertation/Final Year Project Subject: Underwater Acoustics. Title: Investigating Noise and Underwater Acoustics in the Deep Sea.</p>
-          <p><small>In this project we went through all the steps for analysing raw data with our own algorithms using MATLAB and other software packages. I learnt the importance of testing, debugging and analysing.</small></p>
-        </dd>
-        <dd>
+          <p>During the course of this degree I learnt a lot about the nature of science as a whole and how knowledge in
+            the discipline of science and maths is something that can be used to better ourselves and help people.</p>
+          <p>Dissertation/Final Year Project Subject: Underwater Acoustics. Title: Investigating Noise and Underwater
+            Acoustics in the Deep Sea.</p>
+          <p>
+            <small>In this project we went through all the steps for analysing raw data with our own algorithms using
+              MATLAB and other software packages. I learnt the importance of testing, debugging and analysing.
+            </small>
+          </p>
+        </li>
+        <li>
           <h4>2006 - 2008: Wymondham High School, Norfolk, UK</h4>
           <p>A Levels: Maths, Physics, Music Technology, Music [AS Level]</p>
           <p>GCSE’s: 9 including Maths, IT, French and English</p>
-        </dd>
-        <dd>
           <p>1995 - 2005: Grace College, Cowan House, KZN, South Africa; Westwood International School, Botswana</p>
-        </dd>
-
-        <dt><h3>Work</h3></dt>
-        <dd>
-          <h4>September 2013 - Present: Zoocha Ltd -Front End Web Developer/Drupal Themer</h4>
-          <p>Variety of different roles in this job but mostly Drupal Theming.</p>
-        </dd>
-        <dd>
-          <h4>Graduation - 2013: Gap Year to South Africa</h4>
-        </dd>
-
-        <dt><h3>Some Skills</h3></dt>
-        <dd>
-          <h4>Technology</h4>
-          <p>HTML5, CSS3, JavaScript, PHP, MySQL, Drupal, Git, Linux.</p>
-        </dd>
-        <dd>
-          <h4>Other Stuff</h4>
-          <p>Experience with Adobe Suite products, Photoshop, Premiere Pro, Illustrator. Music production stuff with Logic Pro X.</p>
-        </dd>
-      </dl>
-    </section>
-    <footer class="footer">
-      <h2>More links</h2>
-      <ul>
-        <li><a href="https://github.com/georgebrook"><i class="fab fa-github-square"></i></a></li>
-        <li><a href="https://www.drupal.org/user/2871149/"><i class="fab fa-drupal"></i></a></li>
-        <li><a href="https://www.linkedin.com/in/georgebrook/"><i class="fab fa-linkedin"></i></a></li>
-        <li><a href="https://codepen.io/georgebrook/"><i class="fab fa-codepen"></i></a></li>
-        <li><a href="https://soundcloud.com/zzxxccii/tracks"><i class="fab fa-soundcloud"></i></a></li>
-        <li><a href="https://imgur.com/a/drf0g"><i class="fab fa-imgur"></i></a></li>
+        </li>
       </ul>
-      <small class="icon-credit">Favicon and mobile icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></small>
-    </footer>
+    </section>
+    <section class="links">
+      <h2>Projects I have worked on</h2>
+      <ul>
+        <li><a target="_blank" href="https://www.london.gov.uk/">Greater London Authority</a></li>
+        <li><a target="_blank" href="https://www.london.gov.uk/talk-london/">TalkLondon</a></li>
+        <li><a target="_blank" href="https://reports.ofsted.gov.uk/">Ofsted Reports</a></li>
+        <li><a target="_blank" href="https://parentview.ofsted.gov.uk/">Ofsted Reports</a></li>
+        <li><a target="_blank" href="https://www.fca.org.uk/">Finacncial Conduct Authority</a></li>
+        <li><a target="_blank" href="https://www.falmouth.ac.uk/">Falmouth University</a></li>
+        <li><a target="_blank" href="https://www.visitbritain.com/">Visit Britain</a></li>
+        <li><a target="_blank" href="https://www.bfbs.com/">BFBS</a></li>
+        <li><a target="_blank" href="https://www.royalmarsden.org/">The Royal Marsden Cancer Charity</a></li>
+        <li><a target="_blank" href="https://www.jersey.com/">Visit Jersey</a></li>
+        <li><a target="_blank" href="https://www.nationalforest.org/">National Forest</a></li>
+        <li>
+          <small><em>and more</em></small>
+        </li>
+      </ul>
+      <h2>Little Things I have made</h2>
+      <ul>
+        <li><a target="_blank" href="https://codepen.io/georgebrook/full/mqexXB">Seamless CSS with background clip</a>
+        </li>
+        <li><a target="_blank" href="https://codepen.io/georgebrook/full/jrLXvP">CSS countdown</a></li>
+        <li><a target="_blank" href="https://codepen.io/georgebrook/full/EbxxgX">Parallax stars</a></li>
+        <li><a target="_blank" href="https://codepen.io/georgebrook/full/MrdEbW">JS Diamond</a></li>
+      </ul>
+      <br>
+      <p>
+        I also have a few ideas for mobile apps and used some mobile orientated JS frameworks to create an MVP them.
+      </p>
+    </section>
   </main>
+  <footer class="footer">
+    <h2>Footer</h2>
+    <ul>
+      <li><a target="_blank" href="https://github.com/georgebrook"><i class="fab fa-github-square"></i><span
+        class="sr-only">click to see my GitHub profile</span></a>
+      </li>
+      <li><a target="_blank" href="https://www.drupal.org/user/2871149/"><i class="fab fa-drupal"></i><span
+        class="sr-only">click to see my Drupal profile</span></a>
+      </li>
+      <li><a target="_blank" href="https://www.linkedin.com/in/georgebrook/"><i class="fab fa-linkedin"></i><span
+        class="sr-only">click to see my LinkedIn profile</span></a>
+      </li>
+      <li><a target="_blank" href="https://codepen.io/georgebrook/"><i class="fab fa-codepen"></i><span class="sr-only">click to see my CodePen profile</span></a>
+      </li>
+      <li><a target="_blank" href="https://soundcloud.com/zzxxccii/tracks"><i class="fab fa-soundcloud"></i><span
+        class="sr-only">click to see my SoundCloud profile</span></a>
+      </li>
+      <li><a target="_blank" href="https://imgur.com/a/drf0g"><i class="fab fa-imgur"></i><span class="sr-only">click to see my artwork</span></a>
+      </li>
+    </ul>
+    <small class="icon-credit">Favicon and mobile icons made by <a target="_blank" href="http://www.freepik.com"
+                                                                   title="Freepik">Freepik</a> from <a
+      href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a
+      href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+    </small>
+  </footer>
+</div>
 </body>
 </html>
