@@ -21,6 +21,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Koulen&family=Libre+Baskerville&family=Roboto+Condensed&display=swap"
     rel="stylesheet">
+  <script async src="https://api.countapi.xyz/hit/georgebrook.github.io/visits?  callback=portfolioViews"></script>
   <style>
     html,
     body {
@@ -90,7 +91,7 @@
     li {
       margin-bottom: 7px;
     }
-    
+
     footer ul {
       padding: 0;
     }
@@ -280,7 +281,16 @@
       href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a
       href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
     </small>
+    <span class="sr-only" id="visits"></span>
   </footer>
 </div>
+<script>
+  (function() {
+    alert('what');
+    function portfolioViews(response) {
+      document.getElementById('visits').innerText = response.value;
+    }
+  })()
+</script>
 </body>
 </html>
