@@ -21,6 +21,11 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Koulen&family=Libre+Baskerville&family=Roboto+Condensed&display=swap"
     rel="stylesheet">
+  <script>
+    function portfolioViews(response) {
+      document.getElementById('visits').innerText = response.value;
+    }
+  </script>
   <script async src="https://api.countapi.xyz/hit/georgebrook.github.io/visits?  callback=portfolioViews"></script>
   <style>
     html,
@@ -284,12 +289,5 @@
     <span class="sr-only" id="visits"></span>
   </footer>
 </div>
-<script>
-  (function() {
-    function portfolioViews(response) {
-      document.getElementById('visits').innerText = response.value;
-    }
-  })()
-</script>
 </body>
 </html>
