@@ -69,24 +69,40 @@
     a {
       position: relative;
       font-weight: bold;
-      background-color: transparent;
-      transition: background-color 0.5s cubic-bezier(0.38, 0.96, 0.3, 0.97);
-    }
-
-    a:link {
       color: #006a60;
     }
 
+    a::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      border-radius: 2px;
+      width: calc(100% + 8px);
+      height: calc(100% + 4px);
+      opacity: 0;
+      left: -4px;
+      bottom: -2px;
+      background-color: #8df3d0;
+      transition: all 0.35s cubic-bezier(0.44, 0.97, 0.08, 0.96);
+    }
+
     a:hover {
-      color: #171717;
-      background-color: #eaffe4;
-      transition: background-color 0.5s cubic-bezier(0.38, 0.96, 0.3, 0.97);
+      color: #000000 !important;
+    }
+
+    a:hover::before {
+      opacity: 1;
+      transition: all 0.35s cubic-bezier(0.44, 0.97, 0.08, 0.96);
     }
 
     a:focus {
-      color: #171717;
-      background-color: #eaffe4;
-      transition: background-color 0.5s cubic-bezier(0.38, 0.96, 0.3, 0.97);
+      color: #000000 !important;
+      outline: none;
+    }
+
+    a:focus::before {
+      opacity: 1;
+      transition: all 0.35s cubic-bezier(0.44, 0.97, 0.08, 0.96);
     }
 
     a:active {
@@ -112,7 +128,11 @@
     }
 
     footer a {
-      padding: 0 4px
+      padding: 3px 6px 0 5px;
+    }
+
+    footer a::before {
+      border-radius: 5px;
     }
 
     .name {
@@ -196,12 +216,16 @@
   <main>
     <section class="cv">
       <h2>Current Status</h2>
-      <p>Hi! I am currently looking for a new Front End role where I can work remotely. If you are seeing this on a mobile device, scroll down to see projects I have worked on.</p>
+      <p>Hi! I am currently looking for a new Front End role where I can work remotely. If you are seeing this on a
+        mobile device, scroll down to see projects I have worked on.</p>
       <h3>Web development Experience</h3>
       <p>Front End web development and Drupal theming, 8+ years at <a target="_blank" href="https://zoocha.com/">Zoocha
         Ltd</a>.</p>
-      <p>I am an Acquia Certified Drupal Front End Specialist in <a target="_blank" href="https://certification.acquia.com/user/5130">Drupal 8 and Drupal 9</a>.</p>
-      <p>Throughout the years I have learned a lot working on a variety of different roles in this job but mostly Drupal theming. I was
+      <p>I am an Acquia Certified Drupal Front End Specialist in <a target="_blank"
+                                                                    href="https://certification.acquia.com/user/5130">Drupal
+        8 and Drupal 9</a>.</p>
+      <p>Throughout the years I have learned a lot working on a variety of different roles in this job but mostly Drupal
+        theming. I was
         responsible for reviewing juniors' code, mentoring new Front End developers, deploying releases, and making
         suggestions for solutions to complex issues.</p>
       <p>Technology can be awesome, especially when it empowers people for good. I have interests in making mobile
@@ -261,11 +285,15 @@
         <li><a target="_blank" href="https://codepen.io/georgebrook/full/MrdEbW">JS Diamond</a></li>
       </ul>
       <br>
-      <p>I like art and attempting to be creative, you can find some of my random drawings here: <a target="_blank" href="https://imgur.com/a/drf0g">https://imgur.com/a/drf0g</a></p>
       <p>
-        I also have a few ideas for mobile apps and have used a few mobile orientated JS frameworks to create MVP's for them.
+        I've got a few ideas for mobile apps and have used a few mobile orientated JS frameworks to create MVP's for
+        them.
       </p>
-      <p>I play the guitar and drums and wish I had learned to read music when I was younger. Lastly, I enjoy the occasional 5k run and playing tennis and cooking eggs.</p>
+      <p>I play the guitar and drums and wish I had learned to read music when I was younger. I enjoy the
+        occasional 5k run, playing tennis and cooking eggs.</p>
+      <p>Art and creativity also play a part in my character, you can find some of my random drawings here: <a target="_blank"
+                                                                                                               href="https://imgur.com/a/drf0g">https://imgur.com/a/drf0g</a>
+      </p>
     </section>
   </main>
   <footer class="footer">
