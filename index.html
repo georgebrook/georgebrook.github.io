@@ -21,12 +21,6 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Koulen&family=Libre+Baskerville&family=Roboto+Condensed&display=swap"
     rel="stylesheet">
-  <script>
-    function portfolioViews(response) {
-      document.getElementById('visits').innerText = response.value;
-    }
-  </script>
-  <script async src="https://api.countapi.xyz/hit/georgebrook.github.io/visits?  callback=portfolioViews"></script>
   <style>
     html,
     body {
@@ -75,6 +69,8 @@
     a {
       position: relative;
       font-weight: bold;
+      background-color: transparent;
+      transition: background-color 0.5s cubic-bezier(0.38, 0.96, 0.3, 0.97);
     }
 
     a:link {
@@ -83,6 +79,16 @@
 
     a:hover {
       color: #171717;
+      background-color: #eaffe4;
+      transition: background-color 0.5s cubic-bezier(0.38, 0.96, 0.3, 0.97);
+    }
+
+    a:focus {
+      color: #171717;
+      background-color: #eaffe4;
+      outline: 2px solid #006a60;
+      outline-offset: 2px;
+      transition: background-color 0.5s cubic-bezier(0.38, 0.96, 0.3, 0.97);
     }
 
     a:active {
@@ -105,6 +111,10 @@
       display: inline-block;
       margin-right: 5px;
       font-size: 25px;
+    }
+
+    footer a {
+      padding: 0 4px
     }
 
     .name {
@@ -188,11 +198,11 @@
   <main>
     <section class="cv">
       <h2>Current Status</h2>
-      <p>Hi there, if you are viewing my online CV on a mobile, don't hesitate to scroll down quickly, the page isn't that large.</p>
+      <p>Hi! I am currently looking for a new role in Drupal Theming where I can work remotely. If you are seeing this on a mobile device, scroll down to see projects I have worked on.</p>
       <h3>Web development Experience</h3>
       <p>Front End web development and Drupal theming, 8+ years at <a target="_blank" href="https://zoocha.com/">Zoocha
         Ltd</a>.</p>
-      <p>I am an Acquia certified Drupal Front End Specialist in Drupal 8 and Drupal 9, you can find me <a href="https://certification.acquia.com/registry?fname=george&lname=brook&exam=All" target="_blank" rel="noopener noreferrer">here</a>.</p>
+      <p>I am an Acquia Certified Drupal Front End Specialist in <a target="_blank" href="https://certification.acquia.com/user/5130">Drupal 8 and Drupal 9</a>.</p>
       <p>Throughout the years I have learned a lot working on a variety of different roles in this job but mostly Drupal Theming. I was
         responsible for reviewing juniors' code, mentoring new Front End developers, deploying releases, and making
         suggestions for solutions to complex issues.</p>
@@ -200,7 +210,7 @@
         applications with a couple of ideas in mind. I am always looking to improve my skills in Javascript and the cool
         frameworks out there, if and when I have the time.</p>
       <h3>Skills</h3>
-      <p>HTML5, CSS3, JavaScript, git, PHP, Drupal, MySQL,Linux.</p>
+      <p>HTML5, CSS3, JavaScript, git, PHP, Drupal, MySQL, Linux.</p>
       <p>Experience with Adobe Suite products, PhotoShop, Premiere Pro, Illustrator. Music production stuff with Logic
         Pro X.</p>
       <h3>Education</h3>
@@ -244,8 +254,7 @@
           <small><em>and more</em></small>
         </li>
       </ul>
-      <h2>Little Things I have made</h2>
-      <p>(this is old stuff)</p>
+      <h2>CodePen fiddles</h2>
       <ul>
         <li><a target="_blank" href="https://codepen.io/georgebrook/full/mqexXB">Seamless CSS with background clip</a>
         </li>
@@ -258,7 +267,7 @@
       <p>
         I also have a few ideas for mobile apps and have used a few mobile orientated JS frameworks to create MVP's for them.
       </p>
-      <p>Lastly, I enjoy the occasional 5k run and playing tennis.</p>
+      <p>I play the guitar and drums and wish I had learned to read music when I was younger. Lastly, I enjoy the occasional 5k run and playing tennis and cooking eggs.</p>
     </section>
   </main>
   <footer class="footer">
@@ -286,7 +295,6 @@
       href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a
       href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
     </small>
-    <span class="sr-only" id="visits"></span>
   </footer>
 </div>
 </body>
