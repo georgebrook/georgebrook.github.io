@@ -1,322 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>George Brook</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>George Brook</title>
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/manifest.json">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="theme-color" content="#ffffff">
-  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
-        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+          integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Koulen&family=Libre+Baskerville&family=Roboto+Condensed&display=swap"
-    rel="stylesheet">
-  <style>
-    html,
-    body {
-      height: 100%;
-      line-height: 1.5;
-    }
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Koulen&family=Libre+Baskerville&family=Roboto+Condensed&display=swap"
+      rel="stylesheet">
+    <style>
+        html,
+        body {
+            height: 100%;
+            line-height: 1.5;
+            cursor: none;
+            overflow-x: hidden;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
 
-    body {
-      width: 90%;
-      margin: 0 auto;
-      font-family: 'Libre Baskerville', serif;
-    }
+        body {
+            width: 90%;
+            margin: 0 auto;
+            font-family: 'Libre Baskerville', serif;
+            transition: all 0.9s ease-out;
+            background-color: #ffffff;
+        }
 
-    ::-moz-selection {
-      background: #8df3d0;
-    }
+        body::-webkit-scrollbar {
+            display: none;
+        }
 
-    ::selection {
-      background: #8df3d0;
-    }
+        ::-moz-selection {
+            background: #8df3d0;
+        }
 
-    h2, h3, h4, h5, h6 {
-      font-weight: 100;
-      font-family: 'Roboto Condensed', sans-serif;
-    }
+        ::selection {
+            background: #8df3d0;
+        }
 
-    h1 {
-      font-family: 'Koulen', cursive;
-      margin-bottom: 40px;
-    }
+        h2, h3, h4, h5, h6 {
+            font-weight: 100;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
 
-    h3 {
-      margin-bottom: 0;
-      margin-top: 30px;
-      font-style: italic;
-    }
+        h1 {
+            font-family: 'Koulen', cursive;
+            margin-bottom: 40px;
+        }
 
-    h4 {
-      margin: 0;
-    }
+        h3 {
+            margin-bottom: 0;
+            margin-top: 30px;
+            font-style: italic;
+        }
 
-    p {
-      font-size: 14px;
-    }
+        h4 {
+            margin: 0;
+        }
 
-    a {
-      position: relative;
-      font-weight: bold;
-      color: #006a60;
-    }
+        p {
+            font-size: 14px;
+        }
 
-    a::before {
-      content: '';
-      position: absolute;
-      z-index: -1;
-      border-radius: 2px;
-      width: calc(100% + 8px);
-      height: calc(100% + 4px);
-      opacity: 0;
-      left: -4px;
-      bottom: -2px;
-      background-color: #8df3d0;
-      transition: all 0.35s cubic-bezier(0.44, 0.97, 0.08, 0.96);
-    }
+        a {
+            position: relative;
+            font-weight: bold;
+            color: #006a60;
+            transition: all 0.35s cubic-bezier(0.44, 0.97, 0.08, 0.96);
+        }
 
-    a:hover {
-      color: #000000 !important;
-    }
+        a:hover {
+            color: #000000 !important;
+            background-color: #8df3d0;
+        }
 
-    a:hover::before {
-      opacity: 1;
-      transition: all 0.35s cubic-bezier(0.44, 0.97, 0.08, 0.96);
-    }
+        a:focus {
+            color: #000000 !important;
+            outline: none;
+        }
 
-    a:focus {
-      color: #000000 !important;
-      outline: none;
-    }
+        a:active {
+            color: #171717;
+        }
 
-    a:focus::before {
-      opacity: 1;
-      transition: all 0.35s cubic-bezier(0.44, 0.97, 0.08, 0.96);
-    }
+        a:visited {
+            color: #767676;
+        }
 
-    a:active {
-      color: #171717;
-    }
+        li {
+            margin-bottom: 7px;
+        }
 
-    a:visited {
-      color: #767676;
-    }
+        footer ul {
+            padding: 0;
+        }
 
-    li {
-      margin-bottom: 7px;
-    }
+        footer ul li {
+            display: inline-block;
+            margin-right: 5px;
+            font-size: 25px;
+        }
 
-    footer ul {
-      padding: 0;
-    }
+        footer a {
+            padding: 3px 6px 0 5px;
+        }
 
-    footer ul li {
-      display: inline-block;
-      margin-right: 5px;
-      font-size: 25px;
-    }
+        footer a::before {
+            border-radius: 5px;
+        }
 
-    footer a {
-      padding: 3px 6px 0 5px;
-    }
+        .name {
+            position: relative;
+            padding-left: 78px;
+            letter-spacing: 4px;
+            font-weight: 100;
+            line-height: 1;
+            margin-top: 35px;
+        }
 
-    footer a::before {
-      border-radius: 5px;
-    }
+        .name::before {
+            content: '';
+            background: url('me.jpg') no-repeat;
+            position: absolute;
+            border-radius: 50px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 60px;
+            height: 60px;
+            background-size: 93px;
+            background-position: -25px -63px;
+        }
 
-    .name {
-      position: relative;
-      padding-left: 78px;
-      letter-spacing: 4px;
-      font-weight: 100;
-      line-height: 1;
-      margin-top: 35px;
-    }
+        .content {
+            padding-bottom: 35px;
+            cursor: default;
+            background-color: #ffffff;
+        }
 
-    .name::before {
-      content: '';
-      background: url('me.jpg') no-repeat;
-      position: absolute;
-      border-radius: 50px;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 60px;
-      height: 60px;
-      background-size: 93px;
-      background-position: -25px -63px;
-    }
+        .sr-only {
+            border: 0 !important;
+            clip: rect(1px, 1px, 1px, 1px) !important;
+            -webkit-clip-path: inset(50%) !important;
+            clip-path: inset(50%) !important;
+            height: 1px !important;
+            margin: -1px !important;
+            overflow: hidden !important;
+            padding: 0 !important;
+            position: absolute !important;
+            width: 1px !important;
+            white-space: nowrap !important;
+        }
 
-    .content {
-      padding-bottom: 35px;
-    }
+        @media (min-width: 990px) {
+            body {
+                width: 990px;
+                margin: 0 auto;
+                background-color: #f1f1f1;
+                cursor: none;
+            }
 
-    .main-content {
-      padding-bottom: 35px;
-    }
+            .content {
+                padding: 20px 50px;
+                border: 1px solid #dddddd;
+                border-top-width: 0;
+                border-bottom-width: 0;
+            }
 
-    .sr-only {
-      border: 0 !important;
-      clip: rect(1px, 1px, 1px, 1px) !important;
-      -webkit-clip-path: inset(50%) !important;
-      clip-path: inset(50%) !important;
-      height: 1px !important;
-      margin: -1px !important;
-      overflow: hidden !important;
-      padding: 0 !important;
-      position: absolute !important;
-      width: 1px !important;
-      white-space: nowrap !important;
-    }
+            main {
+                display: flex;
+            }
 
-    @media (min-width: 990px) {
-      body {
-        width: 990px;
-        margin: 0 auto;
-      }
+            section:first-child {
+                margin-right: 30px;
+                flex-basis: 100%;
+            }
 
-      .content {
-        padding: 20px 50px;
-        border: 1px solid #dddddd;
-        border-top-width: 0;
-        border-bottom-width: 0;
-      }
+            .icon-credit {
+                margin-top: 30px;
+            }
+        }
 
-      main {
-        display: flex;
-      }
+        .cursor {
+            position: absolute;
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            mix-blend-mode: darken;
+            background: #8df3d0;
+            transition: all 0.2s ease-out;
+            pointer-events: none;
+        }
+    </style>
+  </head>
+  <body>
+  <div class="content">
+    <header>
+      <h1 class="name">George Brook</h1>
+    </header>
+    <main>
+      <section class="cv">
+        <h2>Current Status</h2>
+        <p>Hello! I am a Front End Web Developer based in South Africa. Here, you can see my skills, experience, and
+          projects I have worked on.</p>
+        <p>
+          I am also working a bit on my own project and experimenting with some of the latest front end tools/frameworks.
+        </p>
+        <h3>Web development experience</h3>
+        <p>10+ years of front end web development and Drupal theming.</p>
+        <p>I am an <a target="_blank" href="https://certification.acquia.com/user/5130">Acquia Certified Drupal Front End
+          Specialist</a> in Drupal
+          8 and Drupal 9.</p>
+        <p>Throughout the years I have learned a lot working on a variety of different roles within Drupal
+          theming and web development. I have been responsible for reviewing code, mentoring developers, deploying
+          releases, and making
+          suggestions and implementing solutions for complex issues.</p>
+        <p>I have a good eye for design and making sure that core web vitals have been considered. I have experience in
+          accessibility principles
+          as well as general semantics and hierarchical principles within web development.</p>
+        <h3>Skills</h3>
+        <p>HTML, CSS, node, JS, gulp, Grunt, webpack, git, CI tools, Drupal as well as Linux, Jenkins, jQuery, PHP, mySQL,
+          NGINX.</p>
+        <p>Experience with Adobe Suite products, PhotoShop, Premiere Pro, Illustrator. Music production with Logic
+          Pro X.</p>
+        <h3>Education</h3>
+        <ul>
+          <li>
+            <h4>2009 - 2012: University of Bath BSc (Hons) Physics 2:1</h4>
+            <p>During the course of this degree I learnt a lot about the nature of science as a whole and how knowledge in
+              the discipline of science and maths is something that can be used to better ourselves and help people.</p>
+            <p>Dissertation/Final Year Project Subject: Underwater Acoustics. Title: Investigating Noise and Underwater
+              Acoustics in the Deep Sea.</p>
+            <p>
+              <small>In this project we went through all the steps for analysing raw data with our own algorithms using
+                MATLAB and other software packages. I learnt the importance of testing, debugging and analysing.
+              </small>
+            </p>
+          </li>
+          <li>
+            <h4>2006 - 2008: Wymondham High School, Norfolk, UK</h4>
+            <p>A Levels: Maths, Physics, Music Technology, Music [AS Level]</p>
+            <p>GCSE’s: 9 including Maths, IT, French and English</p>
+          </li>
+        </ul>
+      </section>
+      <section class="links">
+        <h2>Projects I Have Worked on/led</h2>
+        <ul>
+          <li><a target="_blank" href="https://www.london.gov.uk/">Greater London Authority</a></li>
+          <li><a target="_blank" href="https://www.london.gov.uk/talk-london/">TalkLondon</a></li>
+          <li><a target="_blank" href="https://reports.ofsted.gov.uk/">Ofsted Reports</a></li>
+          <li><a target="_blank" href="https://parentview.ofsted.gov.uk/">Ofsted Parent View</a></li>
+          <li><a target="_blank" href="https://www.fca.org.uk/">Finacncial Conduct Authority</a></li>
+          <li><a target="_blank" href="https://www.falmouth.ac.uk/">Falmouth University</a></li>
+          <li><a target="_blank" href="https://www.visitbritain.com/">Visit Britain</a></li>
+          <li><a target="_blank" href="https://www.bfbs.com/">BFBS</a></li>
+          <li><a target="_blank" href="https://www.royalmarsden.org/">The Royal Marsden Cancer Charity</a></li>
+          <li><a target="_blank" href="https://www.jersey.com/">Visit Jersey</a></li>
+          <li><a target="_blank" href="https://www.nationalforest.org/">National Forest</a></li>
+          <li><a target="_blank" href="https://www.iop.org/">IOP</a></li>
+          <li><a target="_blank" href="https://www.coralgables.com/">Coral Gables</a></li>
+          <li><a target="_blank" href="https://www.topdeck.travel/">Topdeck Travel</a></li>
+          <li><a target="_blank" href="https://www.tttech-auto.com/">TTTech Auto</a></li>
+          <li><a target="_blank" href="https://www.framestore.com/">Framestore</a></li>
+          <li><a target="_blank" href="https://www.ashmoregroup.com/en-gb">Ashmore Group</a></li>
+          <li><a target="_blank" href="https://www.countryside.co.uk/">Countryside Ski & Climb</a></li>
 
-      section:first-child {
-        margin-right: 30px;
-        flex-basis: 100%;
-      }
-
-      .icon-credit {
-        margin-top: 30px;
-      }
-    }
-  </style>
-</head>
-<body>
-<div class="content">
-  <header>
-    <h1 class="name">George Brook</h1>
-  </header>
-  <main>
-    <section class="cv">
-      <h2>Current Status</h2>
-      <p>Hello! I am Front End Web Developer based in South Africa. Here, you can see my skills, experience, and projects I have worked on.</p>
-      <p>
-        I am also working a bit on my own project and experimenting with some of the latest Front End tools.
-      </p>
-      <h3>Web development experience</h3>
-      <p>8+ years of Front End web development and Drupal theming.</p>
-      <p>I am an Acquia Certified Drupal Front End Specialist in <a target="_blank" href="https://certification.acquia.com/user/5130">Drupal
-        8 and Drupal 9</a>.</p>
-      <p>Throughout the years I have learned a lot working on a variety of different roles in this job but mostly Drupal
-        theming. I was responsible for reviewing juniors' code, mentoring new Front End developers, deploying releases through Jenkins, and making
-        suggestions for solutions to complex issues. I was also responsible for applying hot fixes in critical bugs with direct ssh access to live servers.</p>
-      <p>Technology can be awesome, especially when it empowers people for good. I have interests in making mobile
-        applications with a couple of ideas in mind. I am always looking to improve my skills in Javascript and the cool
-        frameworks out there, if and when I have the time.</p>
-      <h3>Skills</h3>
-      <p>HTML5, CSS3, SASS, npm, JavaScript, Node.js, gulp, Grunt, webpack git, CI tools, Drupal as well as Linux, Jenkins, jQuery, PHP, mySQL, NGINX.</p>
-      <p>Experience with Adobe Suite products, PhotoShop, Premiere Pro, Illustrator. Music production stuff with Logic
-        Pro X.</p>
-      <h3>Education</h3>
+          <li>
+            <small><em>and more</em></small>
+          </li>
+        </ul>
+        <h2>CodePen</h2>
+        <ul>
+          <li><a target="_blank" href="https://codepen.io/georgebrook/full/mqexXB">Seamless CSS with background clip</a>
+          </li>
+          <li><a target="_blank" href="https://codepen.io/georgebrook/full/jrLXvP">CSS countdown</a></li>
+          <li><a target="_blank" href="https://codepen.io/georgebrook/full/EbxxgX">Parallax stars</a></li>
+          <li><a target="_blank" href="https://codepen.io/georgebrook/full/MrdEbW">JS Diamond</a></li>
+        </ul>
+        <br>
+        <p>Aside from web development, I play the guitar, drums and piano. I enjoy the
+          occasional 5k run, playing tennis and cooking eggs. I also enjoy a good gym session but I am no Arnold
+          Schwarzenegger.</p>
+        <p>Art and creativity also play a part in my character, you can find some of my random drawings here: <a
+          target="_blank"
+          href="https://imgur.com/a/drf0g">https://imgur.com/a/drf0g</a>
+        </p>
+      </section>
+    </main>
+    <footer class="footer">
+      <h2>Footer</h2>
       <ul>
-        <li>
-          <h4>2009 - 2012: University of Bath BSc (Hons) Physics 2:1</h4>
-          <p>During the course of this degree I learnt a lot about the nature of science as a whole and how knowledge in
-            the discipline of science and maths is something that can be used to better ourselves and help people.</p>
-          <p>Dissertation/Final Year Project Subject: Underwater Acoustics. Title: Investigating Noise and Underwater
-            Acoustics in the Deep Sea.</p>
-          <p>
-            <small>In this project we went through all the steps for analysing raw data with our own algorithms using
-              MATLAB and other software packages. I learnt the importance of testing, debugging and analysing.
-            </small>
-          </p>
+        <li><a target="_blank" href="https://github.com/georgebrook"><i class="fab fa-github-square"></i><span
+          class="sr-only">Click to see my GitHub profile</span></a>
         </li>
-        <li>
-          <h4>2006 - 2008: Wymondham High School, Norfolk, UK</h4>
-          <p>A Levels: Maths, Physics, Music Technology, Music [AS Level]</p>
-          <p>GCSE’s: 9 including Maths, IT, French and English</p>
+        <li><a target="_blank" href="https://www.drupal.org/user/2871149/"><i class="fab fa-drupal"></i><span
+          class="sr-only">Click to see my Drupal profile</span></a>
+        </li>
+        <li><a target="_blank" href="https://www.linkedin.com/in/georgebrook/"><i class="fab fa-linkedin"></i><span
+          class="sr-only">Click to see my LinkedIn profile</span></a>
+        </li>
+        <li><a target="_blank" href="https://codepen.io/georgebrook/"><i class="fab fa-codepen"></i><span class="sr-only">Click to see my CodePen profile</span></a>
+        </li>
+        <li><a target="_blank" href="https://soundcloud.com/zzxxccii/tracks"><i class="fab fa-soundcloud"></i><span
+          class="sr-only">Click to see my SoundCloud profile</span></a>
+        </li>
+        <li><a target="_blank" href="https://imgur.com/a/drf0g"><i class="fab fa-imgur"></i><span class="sr-only">Click to see my artwork</span></a>
         </li>
       </ul>
-    </section>
-    <section class="links">
-      <h2>Projects I Have Worked on/lead</h2>
-      <ul>
-        <li><a target="_blank" href="https://www.london.gov.uk/">Greater London Authority (D7)</a></li>
-        <li><a target="_blank" href="https://www.london.gov.uk/talk-london/">TalkLondon (D8/9)</a></li>
-        <li><a target="_blank" href="https://reports.ofsted.gov.uk/">Ofsted Reports (Slim PHP with D8 content API)</a></li>
-        <li><a target="_blank" href="https://parentview.ofsted.gov.uk/">Ofsted Parent View (D8/9)</a></li>
-        <li><a target="_blank" href="https://www.fca.org.uk/">Finacncial Conduct Authority (D9)</a></li>
-        <li><a target="_blank" href="https://www.falmouth.ac.uk/">Falmouth University (D9)</a></li>
-        <li><a target="_blank" href="https://www.visitbritain.com/">Visit Britain (D8/9)</a></li>
-        <li><a target="_blank" href="https://www.bfbs.com/">BFBS (D7/8 multisite)</a></li>
-        <li><a target="_blank" href="https://www.royalmarsden.org/">The Royal Marsden Cancer Charity (D8)</a></li>
-        <li><a target="_blank" href="https://www.jersey.com/">Visit Jersey (D7/8)</a></li>
-        <li><a target="_blank" href="https://www.nationalforest.org/">National Forest (D8)</a></li>
-        <li><a target="_blank" href="https://www.qatar2022.qa/en/home">SC.QA (D8/9)</a></li>
-        <li><a target="_blank" href="https://www.zoocha.com/">Zoocha Ltd. (D8/9)</a></li>
-        <li>
-          <small><em>and more</em></small>
-        </li>
-      </ul>
-      <h2>CodePen Fiddles</h2>
-      <ul>
-        <li><a target="_blank" href="https://codepen.io/georgebrook/full/mqexXB">Seamless CSS with background clip</a>
-        </li>
-        <li><a target="_blank" href="https://codepen.io/georgebrook/full/jrLXvP">CSS countdown</a></li>
-        <li><a target="_blank" href="https://codepen.io/georgebrook/full/EbxxgX">Parallax stars</a></li>
-        <li><a target="_blank" href="https://codepen.io/georgebrook/full/MrdEbW">JS Diamond</a></li>
-      </ul>
-      <br>
-      <p>I play the guitar and drums and wish I had learned to read music when I was younger. I enjoy the
-        occasional 5k run, playing tennis and cooking eggs. I also enjoy a good gym session but I am no Arnold Schwarzenegger.</p>
-      <p>Art and creativity also play a part in my character, you can find some of my random drawings here: <a target="_blank"
-                                                                                                               href="https://imgur.com/a/drf0g">https://imgur.com/a/drf0g</a>
-      </p>
-    </section>
-  </main>
-  <footer class="footer">
-    <h2>Footer</h2>
-    <ul>
-      <li><a target="_blank" href="https://github.com/georgebrook"><i class="fab fa-github-square"></i><span
-        class="sr-only">Click to see my GitHub profile</span></a>
-      </li>
-      <li><a target="_blank" href="https://www.drupal.org/user/2871149/"><i class="fab fa-drupal"></i><span
-        class="sr-only">Click to see my Drupal profile</span></a>
-      </li>
-      <li><a target="_blank" href="https://www.linkedin.com/in/georgebrook/"><i class="fab fa-linkedin"></i><span
-        class="sr-only">Click to see my LinkedIn profile</span></a>
-      </li>
-      <li><a target="_blank" href="https://codepen.io/georgebrook/"><i class="fab fa-codepen"></i><span class="sr-only">Click to see my CodePen profile</span></a>
-      </li>
-      <li><a target="_blank" href="https://soundcloud.com/zzxxccii/tracks"><i class="fab fa-soundcloud"></i><span
-        class="sr-only">Click to see my SoundCloud profile</span></a>
-      </li>
-      <li><a target="_blank" href="https://imgur.com/a/drf0g"><i class="fab fa-imgur"></i><span class="sr-only">Click to see my artwork</span></a>
-      </li>
-    </ul>
-    <small class="icon-credit">Favicon and mobile icons made by <a target="_blank" href="http://www.freepik.com"
-                                                                   title="Freepik">Freepik</a> from <a
-      href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a
-      href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
-    </small>
-  </footer>
-</div>
-</body>
+      <small class="icon-credit">Favicon and mobile icons made by <a target="_blank" href="http://www.freepik.com"
+                                                                     title="Freepik">Freepik</a> from <a
+        href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a
+        href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+      </small>
+    </footer>
+  </div>
+  <span class="cursor"></span>
+  <script>
+    if (window.innerWidth > 990) {
+      var cursor = document.querySelector('.cursor');
+
+      document.addEventListener('mousemove', function (event) {
+        var windowWidth = window.innerWidth;
+        var pageX = event.pageX - 10;
+        var pageY = event.pageY - 10;
+        var xFromCenter = -1 + (event.x/windowWidth) * 2;
+        if (Math.sign(xFromCenter) === -1) {
+          xFromCenter *= -1;
+        }
+
+        cursor.style.left = pageX + 'px';
+        cursor.style.top = pageY + 'px';
+        cursor.style.transform = 'scale(' + 100 ** xFromCenter + ')';
+      });
+
+      var contentDiv = document.querySelector('.content');
+      var body = document.getElementsByTagName('body')[0];
+
+      contentDiv.addEventListener('mouseover', function () {
+        cursor.style.opacity = '0';
+        body.style.backgroundColor = '#f1f1f1';
+      });
+
+      contentDiv.addEventListener('mouseleave', function () {
+        cursor.style.opacity = '0.5';
+        body.style.backgroundColor = '#ffffff';
+      });
+    }
+  </script>
+  </body>
 </html>
