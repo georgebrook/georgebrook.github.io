@@ -52,7 +52,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
   <style>
     /* Base styles */
@@ -89,9 +89,9 @@
     }
 
     body {
-      font-family: "DM Serif Text", sans-serif;
+      font-family: "Roboto", sans-serif;
       font-optical-sizing: auto;
-      font-weight: 100;
+      font-weight: 300;
       font-style: normal;
       font-size: 20px;
       background-color: var(--content-bg);
@@ -121,18 +121,23 @@
       font-size: 22px;
       margin: 0;
       letter-spacing: 2px;
-      font-weight: 700;
       font-style: normal;
       display: flex;
       flex-direction: column;
       gap: 10px;
     }
 
+    .name span {
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
     .name small {
       display: flex;
       flex-direction: row;
-      gap: 10px;
+      gap: 6px;
       align-items: center;
+      font-size: 12px;
     }
 
     .name svg {
@@ -154,7 +159,7 @@
     h4,
     h5,
     h6 {
-      font-weight: 100;
+      font-weight: 400;
       font-style: normal;
     }
 
@@ -306,6 +311,10 @@
         font-size: 45px;
       }
 
+      .name small {
+        font-size: 18px;
+      }
+
       .content {
         padding: 55px 50px;
         border-top-width: 0;
@@ -347,7 +356,7 @@
     <header role="banner">
       <img src="me-colour.jpg" alt="George Brook - Professional headshot" class="profile-image" width="80" height="80">
       <h1 class="name">
-        GEORGE BROOK
+        <span>George Brook</span>
         <small>
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -394,12 +403,12 @@
 
     <main id="main-content" itemscope itemtype="http://schema.org/Person">
       <section class="cv" aria-labelledby="about-heading">
-        <h2 id="about-heading"><strong>Profile</strong></h2>
+        <h2 id="about-heading">Profile</h2>
         <p itemprop="description">Front-End Web Developer with over 10 years of experience, specializing in building
           accessible, performant, and user-friendly web applications. Versatile and adaptable, always eager to learn new
           technologies and techniques.</p>
 
-        <h3 id="experience-heading"><strong>Professional Experience</strong></h3>
+        <h3 id="experience-heading">Professional Experience</h3>
         <p>I bring extensive experience in front-end development, having worked across various roles and
           responsibilities:</p>
         <ul>
@@ -420,14 +429,14 @@
           DrupalCamp's and <a target="_blank" rel="noopener noreferrer"
             href="https://events.drupal.org/amsterdam2019.html">DrupalCon Amsterdam</a>.</p>
 
-        <h3 id="skills-heading"><strong>Technical Skills</strong></h3>
+        <h3 id="skills-heading">Technical Skills</h3>
         <p itemprop="knowsAbout">React, NextJS, TypeScript, Drupal, Storybook, Twig, HTML, CSS, JavaScript, jQuery,
           DDEV, Docker, Git, npm, PHP, MySQL, NGINX, Linux</p>
 
-        <h3 id="education-heading"><strong>Education</strong></h3>
+        <h3 id="education-heading">Education</h3>
         <ul>
           <li itemprop="alumniOf" itemscope itemtype="http://schema.org/CollegeOrUniversity">
-            <h4><strong>2009 - 2012: <span itemprop="name">University of Bath</span> BSc (Hons) Physics 2:1</strong>
+            <h4>2009 - 2012: <span itemprop="name">University of Bath</span> BSc (Hons) Physics 2:1
             </h4>
             <p>During this degree, I developed strong analytical and problem-solving skills through scientific research
               and data analysis.</p>
@@ -437,7 +446,7 @@
                 presentation.</small></p>
           </li>
           <li>
-            <h4><strong>2006 - 2008: Wymondham High School, Norfolk, UK</strong></h4>
+            <h4>2006 - 2008: Wymondham High School, Norfolk, UK</h4>
             <p>A Levels: Maths, Physics, Music Technology, Music</p>
             <p>GCSEs: 10 including Maths, IT, French, and English</p>
           </li>
@@ -445,7 +454,7 @@
       </section>
 
       <section class="links" aria-labelledby="projects-heading">
-        <h2 id="projects-heading"><strong>Featured Projects</strong></h2>
+        <h2 id="projects-heading">Featured Projects</h2>
         <p>I've had the privilege of working with leading organizations across various sectors:</p>
         <ul>
           <li><a target="_blank" rel="noopener noreferrer" href="https://www.london.gov.uk/">Greater London
@@ -487,7 +496,7 @@
           <li><small><em>and more</em></small></li>
         </ul>
 
-        <h2 id="online-fun-heading"><strong>Online Fun</strong></h2>
+        <h2 id="online-fun-heading">Online Fun</h2>
         <p>Explore some of my interactive experiments and creative coding projects:</p>
         <ul>
           <li><a target="_blank" rel="noopener noreferrer" href="https://codepen.io/georgebrook/full/mqexXB">CSS
@@ -501,7 +510,7 @@
               Diamond Pattern</a></li>
         </ul>
 
-        <h2 id="beyond-code-heading"><strong>Beyond Code</strong></h2>
+        <h2 id="beyond-code-heading">Beyond Code</h2>
         <p>Outside of web development, I'm passionate about:</p>
         <ul>
           <li>Music: Playing guitar, drums, and piano</li>
@@ -517,7 +526,7 @@
     </main>
 
     <footer class="footer" role="contentinfo">
-      <h2 id="connect-heading"><strong>Connect With Me</strong></h2>
+      <h2 id="connect-heading">Elsewhere</h2>
       <nav aria-labelledby="connect-heading">
         <ul>
           <li>
