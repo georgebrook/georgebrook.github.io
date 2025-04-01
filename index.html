@@ -85,16 +85,15 @@
       -ms-overflow-style: none;
       scrollbar-width: none;
       transition: background-color var(--transition-duration) ease-in-out,
-                  color var(--transition-duration) ease-in-out;
+        color var(--transition-duration) ease-in-out;
     }
 
     body {
       font-family: "DM Serif Text", sans-serif;
       font-optical-sizing: auto;
-      font-weight: 400;
+      font-weight: 100;
       font-style: normal;
-      font-variation-settings: "wdth" 100;
-      font-size: 17px;
+      font-size: 20px;
       background-color: var(--content-bg);
       width: 90%;
       margin: 0 auto;
@@ -111,13 +110,9 @@
     }
 
     header img {
-      width: 80px;
-      height: 80px;
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
-    }
-
-    main {
-      font-size: 80%;
     }
 
     .name {
@@ -128,6 +123,21 @@
       letter-spacing: 2px;
       font-weight: 700;
       font-style: normal;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .name small {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .name svg {
+      width: 20px;
+      height: 20px;
     }
 
     /* Content styles */
@@ -199,7 +209,6 @@
 
     footer ul li {
       display: inline-block;
-      margin-right: 5px;
     }
 
     footer a {
@@ -245,6 +254,7 @@
       justify-content: center;
       transition: all var(--transition-duration) ease-in-out;
       z-index: 1000;
+      border: 1px solid var(--border-color);
     }
 
     .theme-toggle:hover {
@@ -293,7 +303,7 @@
       }
 
       .name {
-        font-size: 50px;
+        font-size: 45px;
       }
 
       .content {
@@ -303,7 +313,6 @@
       }
 
       main {
-        font-size: 100%;
         display: flex;
         justify-content: space-between;
         gap: 40px;
@@ -320,16 +329,6 @@
       .theme-toggle {
         bottom: auto;
         top: 20px;
-      }
-
-      footer ul li {
-        display: inline-block;
-        margin-right: 15px;
-      }
-
-      .footer svg {
-        width: 45px;
-        height: 45px;
       }
     }
   </style>
@@ -349,15 +348,56 @@
       <img src="me-colour.jpg" alt="George Brook - Professional headshot" class="profile-image" width="80" height="80">
       <h1 class="name">
         GEORGE BROOK
+        <small>
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M18.18 8.03933L18.6435 7.57589C19.4113 6.80804 20.6563 6.80804 21.4241 7.57589C22.192 8.34374 22.192 9.58868 21.4241 10.3565L20.9607 10.82M18.18 8.03933C18.18 8.03933 18.238 9.02414 19.1069 9.89309C19.9759 10.762 20.9607 10.82 20.9607 10.82M18.18 8.03933L13.9194 12.2999C13.6308 12.5885 13.4865 12.7328 13.3624 12.8919C13.2161 13.0796 13.0906 13.2827 12.9882 13.4975C12.9014 13.6797 12.8368 13.8732 12.7078 14.2604L12.2946 15.5L12.1609 15.901M20.9607 10.82L16.7001 15.0806C16.4115 15.3692 16.2672 15.5135 16.1081 15.6376C15.9204 15.7839 15.7173 15.9094 15.5025 16.0118C15.3203 16.0986 15.1268 16.1632 14.7396 16.2922L13.5 16.7054L13.099 16.8391M13.099 16.8391L12.6979 16.9728C12.5074 17.0363 12.2973 16.9867 12.1553 16.8447C12.0133 16.7027 11.9637 16.4926 12.0272 16.3021L12.1609 15.901M13.099 16.8391L12.1609 15.901"
+                stroke="currentColor" stroke-width="1.5"></path>
+              <path d="M8 13H10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+              <path d="M8 9H14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+              <path d="M8 17H9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+              <path
+                d="M3 14V10C3 6.22876 3 4.34315 4.17157 3.17157C5.34315 2 7.22876 2 11 2H13C16.7712 2 18.6569 2 19.8284 3.17157M21 14C21 17.7712 21 19.6569 19.8284 20.8284M4.17157 20.8284C5.34315 22 7.22876 22 11 22H13C16.7712 22 18.6569 22 19.8284 20.8284M19.8284 20.8284C20.7715 19.8853 20.9554 18.4796 20.9913 16"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+            </g>
+          </svg>
+          Front End Web Develeper
+        </small>
+        <small>
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path d="M22 22L2 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+              <path
+                d="M2 11L6.06296 7.74968M22 11L13.8741 4.49931C12.7784 3.62279 11.2216 3.62279 10.1259 4.49931L9.34398 5.12486"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+              <path d="M15.5 5.5V3.5C15.5 3.22386 15.7239 3 16 3H18.5C18.7761 3 19 3.22386 19 3.5V8.5"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+              <path d="M4 22V9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+              <path d="M20 9.5V13.5M20 22V17.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+              <path
+                d="M15 22V17C15 15.5858 15 14.8787 14.5607 14.4393C14.1213 14 13.4142 14 12 14C10.5858 14 9.87868 14 9.43934 14.4393M9 22V17"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path
+                d="M14 9.5C14 10.6046 13.1046 11.5 12 11.5C10.8954 11.5 10 10.6046 10 9.5C10 8.39543 10.8954 7.5 12 7.5C13.1046 7.5 14 8.39543 14 9.5Z"
+                stroke="currentColor" stroke-width="1.5"></path>
+            </g>
+          </svg>
+          Cape Town, South Africa
+        </small>
       </h1>
-<p>Cape Town, South Africa</p>
     </header>
 
     <main id="main-content" itemscope itemtype="http://schema.org/Person">
       <section class="cv" aria-labelledby="about-heading">
         <h2 id="about-heading"><strong>Profile</strong></h2>
-        <p itemprop="description">Front End Web Developer with over 10 years of experience, I specialize in building accessible, performant, and
-          user-friendly web applications. I am a versatile person, and I love to learn new things.</p>
+        <p itemprop="description">Front-End Web Developer with over 10 years of experience, specializing in building
+          accessible, performant, and user-friendly web applications. Versatile and adaptable, always eager to learn new
+          technologies and techniques.</p>
 
         <h3 id="experience-heading"><strong>Professional Experience</strong></h3>
         <p>I bring extensive experience in front-end development, having worked across various roles and
@@ -371,11 +411,14 @@
           <li>Performance optimization and core web vitals</li>
         </ul>
 
-        <p>I am an <a target="_blank" rel="noopener noreferrer" href="https://certification.acquia.com/user/5130">Acquia Certified Drupal Front
+        <p>I am an <a target="_blank" rel="noopener noreferrer" href="https://certification.acquia.com/user/5130">Acquia
+            Certified Drupal Front
             End Specialist</a> in Drupal 8 and Drupal 9, demonstrating my commitment to professional development and
           technical excellence.</p>
-        <p>I have also attended several web conferences including <a target="_blank" rel="noopener noreferrer" href="https://ffconf.org/">ffconf</a>, multiple
-          DrupalCamp's and <a target="_blank" rel="noopener noreferrer" href="https://events.drupal.org/amsterdam2019.html">DrupalCon Amsterdam</a>.</p>
+        <p>I have also attended several web conferences including <a target="_blank" rel="noopener noreferrer"
+            href="https://ffconf.org/">ffconf</a>, multiple
+          DrupalCamp's and <a target="_blank" rel="noopener noreferrer"
+            href="https://events.drupal.org/amsterdam2019.html">DrupalCon Amsterdam</a>.</p>
 
         <h3 id="skills-heading"><strong>Technical Skills</strong></h3>
         <p itemprop="knowsAbout">React, NextJS, TypeScript, Drupal, Storybook, Twig, HTML, CSS, JavaScript, jQuery,
@@ -405,27 +448,39 @@
         <h2 id="projects-heading"><strong>Featured Projects</strong></h2>
         <p>I've had the privilege of working with leading organizations across various sectors:</p>
         <ul>
-          <li><a target="_blank" rel="noopener noreferrer" href="https://www.london.gov.uk/">Greater London Authority</a></li>
-          <li><a target="_blank" rel="noopener noreferrer" href="https://www.london.gov.uk/talk-london/">TalkLondon</a></li>
+          <li><a target="_blank" rel="noopener noreferrer" href="https://www.london.gov.uk/">Greater London
+              Authority</a></li>
+          <li><a target="_blank" rel="noopener noreferrer" href="https://www.london.gov.uk/talk-london/">TalkLondon</a>
+          </li>
           <li><a target="_blank" rel="noopener noreferrer" href="https://reports.ofsted.gov.uk/">Ofsted Reports</a></li>
-          <li><a target="_blank" rel="noopener noreferrer" href="https://parentview.ofsted.gov.uk/">Ofsted Parent View</a></li>
-          <li><a target="_blank" rel="noopener noreferrer" href="https://www.fca.org.uk/">Financial Conduct Authority</a></li>
-          <li><a target="_blank" rel="noopener noreferrer" href="https://www.falmouth.ac.uk/">Falmouth University</a></li>
+          <li><a target="_blank" rel="noopener noreferrer" href="https://parentview.ofsted.gov.uk/">Ofsted Parent
+              View</a></li>
+          <li><a target="_blank" rel="noopener noreferrer" href="https://www.fca.org.uk/">Financial Conduct
+              Authority</a></li>
+          <li><a target="_blank" rel="noopener noreferrer" href="https://www.falmouth.ac.uk/">Falmouth University</a>
+          </li>
           <li><a target="_blank" rel="noopener noreferrer" href="https://www.visitbritain.com/">Visit Britain</a></li>
           <li><a target="_blank" rel="noopener noreferrer" href="https://www.bfbs.com/">BFBS</a></li>
-          <li><a target="_blank" rel="noopener noreferrer" href="https://www.royalmarsden.org/">The Royal Marsden Cancer Charity</a></li>
+          <li><a target="_blank" rel="noopener noreferrer" href="https://www.royalmarsden.org/">The Royal Marsden Cancer
+              Charity</a></li>
           <li><a target="_blank" rel="noopener noreferrer" href="https://www.jersey.com/">Visit Jersey</a></li>
-          <li><a target="_blank" rel="noopener noreferrer" href="https://www.nationalforest.org/">National Forest</a></li>
+          <li><a target="_blank" rel="noopener noreferrer" href="https://www.nationalforest.org/">National Forest</a>
+          </li>
           <li><a target="_blank" rel="noopener noreferrer" href="https://www.iop.org/">IOP</a></li>
           <li><a target="_blank" rel="noopener noreferrer" href="https://www.coralgables.com/">Coral Gables</a></li>
           <li><a target="_blank" rel="noopener noreferrer" href="https://www.topdeck.travel/">Topdeck Travel</a></li>
           <li><a target="_blank" rel="noopener noreferrer" href="https://www.tttech-auto.com/">TTTech Auto</a></li>
           <li><a target="_blank" rel="noopener noreferrer" href="https://www.framestore.com/">Framestore</a></li>
-          <li><a target="_blank" rel="noopener noreferrer" href="https://www.ashmoregroup.com/en-gb">Ashmore Group</a></li>
-          <li><a target="_blank" rel="noopener noreferrer" href="https://www.countryside.co.uk/">Countryside Ski & Climb</a></li>
-          <li><a target="_blank" rel="noopener noreferrer" href="https://mbs.business-stream.co.uk/mbs">My Business Stream</a></li>
-          <li><a target="_blank" rel="noopener noreferrer" href="https://www.nortonabrasives.com/en-gb">Norton Abrasives</a></li>
-          <li><a target="_blank" rel="noopener noreferrer" href="https://www.highlandparkwhisky.com/en">Highland Park Whisky</a></li>
+          <li><a target="_blank" rel="noopener noreferrer" href="https://www.ashmoregroup.com/en-gb">Ashmore Group</a>
+          </li>
+          <li><a target="_blank" rel="noopener noreferrer" href="https://www.countryside.co.uk/">Countryside Ski &
+              Climb</a></li>
+          <li><a target="_blank" rel="noopener noreferrer" href="https://mbs.business-stream.co.uk/mbs">My Business
+              Stream</a></li>
+          <li><a target="_blank" rel="noopener noreferrer" href="https://www.nortonabrasives.com/en-gb">Norton
+              Abrasives</a></li>
+          <li><a target="_blank" rel="noopener noreferrer" href="https://www.highlandparkwhisky.com/en">Highland Park
+              Whisky</a></li>
           <li><a target="_blank" rel="noopener noreferrer" href="https://wyomingwhiskey.com/">Wyoming Whiskey</a></li>
           <li><a target="_blank" rel="noopener noreferrer" href="https://www.ses.com/">SES</a></li>
           <li><a target="_blank" rel="noopener noreferrer" href="https://www.iabuk.com/">IAB UK</a></li>
@@ -435,11 +490,15 @@
         <h2 id="online-fun-heading"><strong>Online Fun</strong></h2>
         <p>Explore some of my interactive experiments and creative coding projects:</p>
         <ul>
-          <li><a target="_blank" rel="noopener noreferrer" href="https://codepen.io/georgebrook/full/mqexXB">CSS Seamless Animated Text</a></li>
-          <li><a target="_blank" rel="noopener noreferrer" href="https://codepen.io/georgebrook/full/jrLXvP">CSS Digital Countdown</a></li>
-          <li><a target="_blank" rel="noopener noreferrer" href="https://codepen.io/georgebrook/full/EbxxgX">Parallax Stars with JavaScript</a>
+          <li><a target="_blank" rel="noopener noreferrer" href="https://codepen.io/georgebrook/full/mqexXB">CSS
+              Seamless Animated Text</a></li>
+          <li><a target="_blank" rel="noopener noreferrer" href="https://codepen.io/georgebrook/full/jrLXvP">CSS Digital
+              Countdown</a></li>
+          <li><a target="_blank" rel="noopener noreferrer" href="https://codepen.io/georgebrook/full/EbxxgX">Parallax
+              Stars with JavaScript</a>
           </li>
-          <li><a target="_blank" rel="noopener noreferrer" href="https://codepen.io/georgebrook/full/MrdEbW">JavaScript Diamond Pattern</a></li>
+          <li><a target="_blank" rel="noopener noreferrer" href="https://codepen.io/georgebrook/full/MrdEbW">JavaScript
+              Diamond Pattern</a></li>
         </ul>
 
         <h2 id="beyond-code-heading"><strong>Beyond Code</strong></h2>
@@ -451,7 +510,8 @@
           <li>Culinary: Experimenting with cooking</li>
           <li>Art: Creating digital and traditional artwork</li>
         </ul>
-        <p>View my artwork collection: <a target="_blank" rel="noopener noreferrer" href="https://imgur.com/a/drf0g">https://imgur.com/a/drf0g</a>
+        <p>View my artwork collection: <a target="_blank" rel="noopener noreferrer"
+            href="https://imgur.com/a/drf0g">https://imgur.com/a/drf0g</a>
         </p>
       </section>
     </main>
@@ -461,7 +521,8 @@
       <nav aria-labelledby="connect-heading">
         <ul>
           <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://github.com/georgebrook" aria-label="Visit George Brook's GitHub profile">
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/georgebrook"
+              aria-label="Visit George Brook's GitHub profile">
               <svg viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" aria-hidden="true">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -484,8 +545,10 @@
             </a>
           </li>
           <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://www.drupal.org/user/2871149/" aria-label="Visit George Brook's Drupal profile">
-              <svg fill="currentColor" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.drupal.org/user/2871149/"
+              aria-label="Visit George Brook's Drupal profile">
+              <svg fill="currentColor" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                 <g id="SVGRepo_iconCarrier">
@@ -498,8 +561,10 @@
             </a>
           </li>
           <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/georgebrook/" aria-label="Visit George Brook's LinkedIn profile">
-              <svg fill="currentColor" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/georgebrook/"
+              aria-label="Visit George Brook's LinkedIn profile">
+              <svg fill="currentColor" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                 <g id="SVGRepo_iconCarrier">
@@ -512,8 +577,10 @@
             </a>
           </li>
           <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://codepen.io/georgebrook/" aria-label="Visit George Brook's CodePen profile">
-              <svg fill="currentColor" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <a target="_blank" rel="noopener noreferrer" href="https://codepen.io/georgebrook/"
+              aria-label="Visit George Brook's CodePen profile">
+              <svg fill="currentColor" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                 <g id="SVGRepo_iconCarrier">
@@ -526,8 +593,10 @@
             </a>
           </li>
           <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://imgur.com/a/drf0g" aria-label="View George Brook's artwork collection">
-              <svg fill="currentColor" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <a target="_blank" rel="noopener noreferrer" href="https://imgur.com/a/drf0g"
+              aria-label="View George Brook's artwork collection">
+              <svg fill="currentColor" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                 <g id="SVGRepo_iconCarrier">
@@ -648,6 +717,6 @@
       }
     }
   </script>
-  </body>
+</body>
 
 </html>
