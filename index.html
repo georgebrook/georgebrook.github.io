@@ -4,173 +4,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#f9f9f9" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
-  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+  <title>George Brook – Front-end Developer | CV & Portfolio</title>
+  <meta name="description"
+    content="Explore the CV of George Brook, a front-end developer specializing in accessible, performant, and user-focused web experiences." />
+  <link rel="canonical" href="https://yourdomain.com/" />
+
+  <meta property="og:title" content="George Brook – Front-end Developer | CV & Portfolio" />
+  <meta property="og:description"
+    content="Explore the CV of George Brook, a front-end developer specializing in accessible, performant, and user-focused web experiences." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourdomain.com/" />
+  <meta property="og:image" content="https://yourdomain.com/og-image.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="George Brook – Front-end Developer | CV & Portfolio" />
+  <meta name="twitter:description"
+    content="Explore the CV of George Brook, a front-end developer specializing in accessible, performant, and user-focused web experiences." />
+  <meta name="twitter:image" content="https://yourdomain.com/og-image.jpg" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
 
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>George Brook – CV</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --text: #333;
-      --bg: #f9f9f9;
-      --accent: #010101;
-      --muted: #666;
-      --shadow: #d6d6d6;
-    }
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 
-    [data-theme="dark"] {
-      --text: #eaeaea;
-      --bg: #121212;
-      --accent: #eaeaea;
-      --muted: #aaa;
-      --shadow: #000;
-    }
-
-    [data-theme="dark"] main {
-      box-shadow: 3px 2px 15px 1px var(--shadow);
-
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      line-height: 1.6;
-      color: var(--text);
-      background: var(--bg);
-    }
-
-    canvas {
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      pointer-events: none;
-    }
-
-    main {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
-      background: var(--bg);
-      box-shadow: 4px 2px 4px 1px var(--shadow);
-    }
-
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.2rem;
-      color: var(--accent);
-    }
-
-    h2 {
-      border-bottom: 2px solid var(--accent);
-      padding-bottom: 0.2rem;
-      margin-top: 2.5rem;
-      font-size: 1.4rem;
-    }
-
-    h3 {
-      margin: 1.5rem 0 0.3rem;
-      font-size: 1.1rem;
-      color: var(--accent);
-    }
-
-    .contact,
-    .meta {
-      font-style: italic;
-      color: var(--muted);
-    }
-
-    ul {
-      padding-left: 1.4rem;
-    }
-
-    a {
-      color: var(--accent);
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .theme-toggle {
-      cursor: pointer;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      user-select: none;
-      width: 48px;
-      height: 48px;
-      position: fixed;
-      bottom: 23px;
-      right: 34px;
-      border-radius: 10px;
-      background: rgba(255, 255, 255, 0.2);
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-    }
-
-    .theme-toggle input {
-      display: none;
-    }
-
-    .icon {
-      stroke: currentColor;
-      fill: currentColor;
-      color: var(--text);
-    }
-
-    .sun-core {
-      fill: currentColor;
-    }
-
-    .sun-rays line {
-      stroke: currentColor;
-      stroke-width: 2;
-      stroke-linecap: round;
-    }
-
-    .moon {
-      fill: currentColor;
-      opacity: 0;
-    }
-
-    .theme-toggle input:checked+.icon {
-      color: var(--text);
-    }
-
-    @media (max-width: 600px) {
-      main {
-        padding: 0.5rem 1rem 3rem;
-        background: none;
-        box-shadow: none;
-      }
-
-      h1 {
-        font-size: 1.8rem;
-      }
-
-      .theme-toggle {
-        width: 40px;
-        height: 40px;
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "George Brook",
+      "jobTitle": "Front-end Developer",
+      "url": "https://yourdomain.com/",
+      "sameAs": [
+        "https://linkedin.com/in/georgebrook",
+        "https://github.com/georgebrook"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "London",
+        "addressCountry": "UK"
       }
     }
-  </style>
+  </script>
+  <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
   <canvas class="noise"></canvas>
+  <button id="random-font-btn" class="font-toggle" aria-label="Randomise font">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="28" stroke-dashoffset="28" d="M12 10l4 7h-8Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.4s" values="28;0"/></path><path d="M12 10l4 7h-8Z" opacity="0"><animate attributeName="d" begin="0.4s" dur="0.8s" keyTimes="0;0.25;1" repeatCount="indefinite" values="M12 10l4 7h-8Z;M12 4l9.25 16h-18.5Z;M12 4l9.25 16h-18.5Z"/><animate attributeName="opacity" begin="0.4s" dur="0.8s" keyTimes="0;0.1;0.75;1" repeatCount="indefinite" values="0;1;1;0"/></path></g></svg>
+  </button>
+
   <label class="theme-toggle" for="themeToggle" aria-label="Toggle dark mode">
     <input type="checkbox" id="themeToggle" />
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -191,7 +79,7 @@
             to="M12 4h1.5M12 4h-1.5M12 4v1.5M12 4v-1.5" />
           <set fill="freeze" attributeName="d" begin="lineMdMoonRisingFilledAltLoop0.begin+5.8s"
             to="M13 4h1.5M13 4h-1.5M13 4v1.5M13 4v-1.5" />
-        </path>
+        </path> 
         <path d="M19 11h1.5M19 11h-1.5M19 11v1.5M19 11v-1.5">
           <animate id="lineMdMoonRisingFilledAltLoop1" fill="freeze" attributeName="stroke-dashoffset"
             begin="1.1s;lineMdMoonRisingFilledAltLoop1.begin+6s" dur="0.4s" values="4;0" />
@@ -232,12 +120,31 @@
   </label>
 
   <main>
-    <h1>George Brook</h1>
-    <p class="contact">Front-End Developer · Cape Town, South Africa</p>
-    <p class="meta"><strong>ID:</strong> 9104125044082 · <strong>Gender:</strong> Male · <strong>Race:</strong> White ·
-      <strong>Languages:</strong> English
-    </p>
-    <p class="meta"><strong>Availability:</strong> 1 June 2025 · <strong>Nationality:</strong> South African</p>
+    <header>
+      <h1>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <path stroke-dasharray="64" stroke-dashoffset="64"
+              d="M13.5 3l5.5 5.5v11.5c0 0.55 -0.45 1 -1 1h-12c-0.55 0 -1 -0.45 -1 -1v-16c0 -0.55 0.45 -1 1 -1Z">
+              <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="64;0" />
+            </path>
+            <path d="M14.5 3.5l2.25 2.25l2.25 2.25z" opacity="0">
+              <animate fill="freeze" attributeName="d" begin="0.6s" dur="0.2s"
+                values="M14.5 3.5l2.25 2.25l2.25 2.25z;M14.5 3.5l0 4.5l4.5 0z" />
+              <set fill="freeze" attributeName="opacity" begin="0.6s" to="1" />
+            </path>
+            <path stroke-dasharray="8" stroke-dashoffset="8" d="M9 13h6">
+              <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.8s" dur="0.2s" values="8;0" />
+            </path>
+            <path stroke-dasharray="4" stroke-dashoffset="4" d="M9 17h3">
+              <animate fill="freeze" attributeName="stroke-dashoffset" begin="1s" dur="0.2s" values="4;0" />
+            </path>
+          </g>
+        </svg>
+        George Brook
+      </h1>
+      <p class="contact">Front-End Developer · Cape Town, South Africa</p>
+    </header>
 
     <section>
       <h2>Education</h2>
@@ -281,9 +188,8 @@
     </section>
 
     <section>
-      <h2>Project Experience</h2>
+      <h2>Fun Stuff</h2>
       <ul>
-        <li><strong>Underwater Acoustics Dissertation</strong> – MATLAB-based deep sea data analysis tools.</li>
         <li><strong>Fun stuff:</strong>
           <ul>
             <li><a target="_blank" href="https://devtools-ecru.vercel.app/elements" target="_blank">Chrome Devtools
@@ -399,7 +305,7 @@
     function drawNoise() {
       const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
       const bg = hexToRGBA(isDark ? '#1d1d1d' : '#f8f8f8');
-      const fg = hexToRGBA(isDark ? '#2d2d2d' : '#f2f2f2');
+      const fg = hexToRGBA(isDark ? '#2d2d2d' : '#dddddd');
 
       const cols = Math.ceil(canvas.width / dotSize);
       const rows = Math.ceil(canvas.height / dotSize);
@@ -436,6 +342,37 @@
     }
 
     loop();
+
+    const googleFonts = [
+    "Roboto",
+    "Open Sans",
+    "Lato",
+    "Merriweather",
+    "Inter",
+    "Montserrat",
+    "Playfair Display",
+    "Raleway",
+    "Source Sans Pro",
+    "IBM Plex Sans"
+  ];
+
+  const fontBtn = document.getElementById('random-font-btn');
+
+  fontBtn.addEventListener('click', () => {
+    const font = googleFonts[Math.floor(Math.random() * googleFonts.length)];
+    const linkId = 'google-font-link';
+
+    const existingLink = document.getElementById(linkId);
+    if (existingLink) existingLink.remove();
+
+    const fontLink = document.createElement('link');
+    fontLink.id = linkId;
+    fontLink.rel = 'stylesheet';
+    fontLink.href = `https://fonts.googleapis.com/css2?family=${font.replace(/ /g, '+')}&display=swap`;
+    document.head.appendChild(fontLink);
+
+    document.body.style.fontFamily = `'${font}', sans-serif`;
+  });
 
   </script>
 </body>
