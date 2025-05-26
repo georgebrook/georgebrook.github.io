@@ -1,114 +1,114 @@
     :root {
-      --text: #333;
-      --bg: #ffffff;
-      --accent: #010101;
-      --muted: #666;
-      --shadow: #d6d6d6;
+        --text: #333;
+        --bg: #ffffff;
+        --accent: #010101;
+        --muted: #666;
+        --shadow: #d6d6d6;
     }
 
     [data-theme="dark"] {
-      --text: #eaeaea;
-      --bg: #121212;
-      --accent: #eaeaea;
-      --muted: #aaa;
+        --text: #eaeaea;
+        --bg: #121212;
+        --accent: #eaeaea;
+        --muted: #aaa;
     }
 
     * {
-      box-sizing: border-box;
+        box-sizing: border-box;
     }
 
     body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      font-size: 1.2rem;
-      line-height: 1.6;
-      color: var(--text);
-      background: var(--bg);
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: var(--text);
+        background: var(--bg);
     }
 
     header svg {
-      width: 40px;
-      height: 40px;
+        width: 40px;
+        height: 40px;
     }
 
     header h1 {
         margin: 0;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
     }
 
     canvas {
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      pointer-events: none;
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
     }
 
     main {
-      max-width: 900px;
-      margin: auto;
-      padding: 1.5rem 3rem;
-      background: var(--bg);
+        max-width: 900px;
+        margin: auto;
+        padding: 1.5rem 3rem;
+        background: var(--bg);
     }
 
     h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.2rem;
-      color: var(--accent);
+        font-size: 2.2rem;
+        margin-bottom: 0.2rem;
+        color: var(--accent);
     }
 
     h2 {
-      border-bottom: 2px solid var(--accent);
-      padding-bottom: 0.2rem;
-      margin-top: 2.5rem;
-      font-size: 1.4rem;
+        border-bottom: 2px solid var(--accent);
+        padding-bottom: 0.2rem;
+        margin-top: 2.5rem;
+        font-size: 1.4rem;
     }
 
     h3 {
-      margin: 1.5rem 0 0.3rem;
-      font-size: 1.1rem;
-      color: var(--accent);
+        margin: 1.5rem 0 0.3rem;
+        font-size: 1.1rem;
+        color: var(--accent);
     }
 
     .contact,
     .meta {
-      font-style: italic;
-      color: var(--muted);
+        font-style: italic;
+        color: var(--muted);
     }
 
     ul {
-      padding-left: 1.4rem;
+        padding-left: 1.4rem;
     }
 
     a {
-      color: var(--accent);
+        color: var(--accent);
     }
 
     a:hover {
-      text-decoration: underline;
+        text-decoration: underline;
     }
 
     .theme-toggle,
     .font-toggle {
-      cursor: pointer;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      user-select: none;
-      width: 48px;
-      height: 48px;
-      color: var(--text);
-      position: fixed;
-      bottom: 23px;
-      top: 23px;
-      right: 34px;
-      border-radius: 10px;
-      background: rgba(255, 255, 255, 0.2);
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
-      border: 1px solid rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+        width: 48px;
+        height: 48px;
+        color: var(--text);
+        position: fixed;
+        bottom: 23px;
+        top: 23px;
+        right: 34px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
     }
 
     .font-toggle {
@@ -116,30 +116,28 @@
     }
 
     .theme-toggle input {
-      display: none;
+        display: none;
     }
 
     @media (max-width: 900px) {
-      main {
-        padding: 1.5rem 1rem 3rem;
-        background: none;
-        box-shadow: none;
-      }
+        main {
+            padding: 1.5rem 1rem 3rem;
+            background: none;
+            box-shadow: none;
+        }
 
-      h1 {
-        font-size: 1.8rem;
-      }
+        h1 {
+            font-size: 1.8rem;
+        }
 
-      .theme-toggle,
-      .font-toggle {
-        width: 40px;
-        height: 40px;
-        top: auto;
-        bottom: 30px;
-        right: 23px;
-      }
+        .theme-toggle,
+        .font-toggle {
+            top: auto;
+            bottom: 25px;
+            right: 23px;
+        }
 
-      .font-toggle {
-        right: 78px;
-      }
+        .font-toggle {
+            right: 89px;
+        }
     }
