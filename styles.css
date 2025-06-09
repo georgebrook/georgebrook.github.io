@@ -164,7 +164,8 @@
         .font-toggle,
         .color-toggle,
         .reset-toggle {
-            top: 118    px;
+            top: auto;
+            bottom: 26px;
             right: 23px;
         }
 
