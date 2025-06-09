@@ -55,19 +55,52 @@
 
 <body>
   <canvas class="noise"></canvas>
-  <button id="random-font-btn" class="font-toggle" aria-label="Randomise font">
+
+  <button id="reset-btn" class="reset-toggle" aria-label="Randomise font">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2">
-        <path stroke-dasharray="28" stroke-dashoffset="28" d="M12 10l4 7h-8Z">
-          <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.4s" values="28;0" />
+      <circle cx="12" cy="12" r="0" fill="currentColor">
+        <animate fill="freeze" attributeName="r" begin="0.8s" dur="0.2s" values="0;2" />
+      </circle>
+      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        <path stroke-dasharray="48" stroke-dashoffset="48"
+          d="M4.25 14c0.89 3.45 4.02 6 7.75 6c4.42 0 8 -3.58 8 -8c0 -4.42 -3.58 -8 -8 -8c-2.39 0 -4.53 1.05 -6 2.71l-2 2.29">
+          <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="48;0" />
         </path>
-        <path d="M12 10l4 7h-8Z" opacity="0">
-          <animate attributeName="d" begin="0.4s" dur="0.8s" keyTimes="0;0.25;1" repeatCount="indefinite"
-            values="M12 10l4 7h-8Z;M12 4l9.25 16h-18.5Z;M12 4l9.25 16h-18.5Z" />
-          <animate attributeName="opacity" begin="0.4s" dur="0.8s" keyTimes="0;0.1;0.75;1" repeatCount="indefinite"
-            values="0;1;1;0" />
+        <path fill="currentColor" stroke-width="1" d="M5.63 7.38l0 0l0 0l0 0z" opacity="0">
+          <animate fill="freeze" attributeName="d" begin="0.6s" dur="0.2s"
+            values="M5.63 7.38l0 0l0 0l0 0z;M5.63 7.38L3.5 5.25L3.5 9.5L7.75 9.5z" />
+          <set fill="freeze" attributeName="opacity" begin="0.6s" to="1" />
         </path>
       </g>
+    </svg>
+  </button>
+
+  <button id="random-font-btn" class="font-toggle" aria-label="Randomise font">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        <path stroke-dasharray="56" stroke-dashoffset="56" d="M3 21l2 -6l11 -11c1 -1 3 -1 4 0c1 1 1 3 0 4l-11 11l-6 2">
+          <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="56;0" />
+        </path>
+        <path stroke-dasharray="8" stroke-dashoffset="8" d="M15 5l4 4">
+          <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="8;0" />
+        </path>
+        <path stroke-dasharray="6" stroke-dashoffset="6" stroke-width="1" d="M6 15l3 3">
+          <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0" />
+        </path>
+      </g>
+    </svg>
+  </button>
+
+  <button id="random-color-btn" class="color-toggle" aria-label="Randomise font">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-dasharray="28" stroke-dashoffset="28" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="2" d="M12 3c0 0 7 6 7 12c0 2 -1 6 -7 6M12 3c0 0 -7 6 -7 12c0 2 1 6 7 6">
+        <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="28;0" />
+      </path>
+      <path fill="currentColor" fill-opacity="0"
+        d="M12 3C12 3 15.27 5.81 17.34 9.5L6 18.41C5.21 17.24 5 15.91 5 15C5 9 12 3 12 3Z">
+        <animate fill="freeze" attributeName="fill-opacity" begin="0.6s" dur="0.15s" values="0;0.3" />
+      </path>
     </svg>
   </button>
 
@@ -155,19 +188,25 @@
         </svg>
         George Brook
       </h1>
-      <p class="contact">Front-End Developer · Cape Town, South Africa</p>
+      <div class="intro">
+        <img src="me-colour.jpg" alt="An image of me with a great view.">
+        <p>I'm a Front-End Developer with over 10 years of experience building responsive, accessible, and
+          high-performance web interfaces. I have a strong passion for structured, reusable components and maintainable
+          front-end architecture. In my free time, I enjoy playing tennis.</p>
+      </div>
     </header>
 
     <section>
       <h2>Education</h2>
-      <p><strong>Bachelor of Science (Physics)</strong><br>University of Bath — 2009–2012</p>
+      <p><strong>Bachelor of Science (Physics, 2:1)</strong><br>University of Bath — 2012</p>
       <p><strong>A Levels</strong><br>Wymondham High School — 2008</p>
+      <p><strong>Certifications</strong><br>Acquia Certified Drupal Front End Specialist (Drupal 8 & 9)</p>
     </section>
 
     <section>
       <h2>Professional Experience</h2>
 
-      <h3>Catch Digital</h3>
+      <h3>Company: Catch Digital (London, UK, remote)</h3>
       <p><strong>Senior Front-End Developer</strong> · March 2022 – May 2025</p>
       <p><strong>Clients:</strong> IOP, TTTech Auto, Framestore, Ashmore Group, Countryside Ski & Climb, My Business
         Stream, Norton Abrasives, Highland Park Whisky, Wyoming Whiskey, SES, IAB UK, Edrington Distilleries, The
@@ -186,7 +225,7 @@
       <p><em>The Macallan Global Website</em> – Front-end support for scalable Drupal/Next.js JSON API build.</p>
       <p><strong>Reason for Leaving:</strong> Company restructure / merger.</p>
 
-      <h3>Zoocha</h3>
+      <h3>Company: Zoocha Ltd (Hertford, UK and remote)</h3>
       <p><strong>Mid/Senior Front-End Developer</strong> · March 2014 – May 2022</p>
       <p><strong>Clients:</strong> Greater London Authority, Ofsted, FCA, Falmouth University, Visit Britain, BFBS,
         Royal Marsden, Visit Jersey, National Forest, Topdeck Travel</p>
@@ -202,31 +241,21 @@
     <section>
       <h2>Fun Stuff</h2>
       <ul>
-        <li><strong>Fun stuff:</strong>
-          <ul>
-            <li><a target="_blank" href="https://devtools-ecru.vercel.app/elements" target="_blank">Chrome Devtools
-                built in VueJS/Nuxt</a></li>
-            <li><a target="_blank" rel="noopener noreferrer" href="https://codepen.io/georgebrook/full/mqexXB">CSS
-                Seamless Animated Text</a></li>
-            <li><a target="_blank" rel="noopener noreferrer" href="https://codepen.io/georgebrook/full/jrLXvP">CSS
-                Digital
-                Countdown</a></li>
-            <li><a target="_blank" href="https://codepen.io/georgebrook/full/PoPopgP">Leaflet Map Clustering</a></li>
-            <li><a target="_blank" rel="noopener noreferrer" href="https://codepen.io/georgebrook/full/EbxxgX">Parallax
-                Stars with JavaScript</a>
-            </li>
-            <li><a target="_blank" rel="noopener noreferrer"
-                href="https://codepen.io/georgebrook/full/MrdEbW">JavaScript
-                Diamond Pattern</a></li>
-          </ul>
+        <li><a target="_blank" href="https://devtools-ecru.vercel.app/elements" target="_blank">Chrome Devtools
+            built in VueJS/Nuxt</a></li>
+        <li><a target="_blank" href="https://github.com/georgebrook/kyc-chat-app" target="_blank">React/NextJS
+            Realtime DB with QR code to chat on same Wifi</a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://codepen.io/georgebrook/full/mqexXB">CSS
+            Seamless Animated Text</a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://codepen.io/georgebrook/full/jrLXvP">CSS
+            Digital
+            Countdown</a></li>
+        <li><a target="_blank" href="https://codepen.io/georgebrook/full/PoPopgP">Leaflet Map Clustering</a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://codepen.io/georgebrook/full/EbxxgX">Parallax
+            Stars with JavaScript</a>
         </li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Certifications</h2>
-      <ul>
-        <li>Acquia Certified Drupal Front End Specialist (Drupal 8 & 9)</li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://codepen.io/georgebrook/full/MrdEbW">JavaScript
+            Diamond Pattern</a></li>
       </ul>
     </section>
 
@@ -240,9 +269,50 @@
         <li><strong>DevOps:</strong> Docker, DDEV, Linux, NGINX, PHP, MySQL</li>
       </ul>
     </section>
+
+    <section class="personal-info">
+      <h2>More About Me</h2>
+      <p>
+        When I’m not coding, I enjoy running long distances, playing tennis (both competitively and for fun), and
+        perfecting my homemade lasagne recipe. Here are some other links.
+      </p>
+      <ul>
+        <li><a href="https://imgur.com/a/artwork-drf0g" target="_blank" rel="noopener">Artwork</a></li>
+        <li><a href="https://soundcloud.com/zzxxccii" target="_blank" rel="noopener">Music</a></li>
+        <li><a href="https://www.drupal.org/u/georgebrook" target="_blank" rel="noopener">Drupal</a></li>
+        <li><a href="https://www.linkedin.com/in/georgebrook/" target="_blank" rel="noopener">Linkedin</a></li>
+      </ul>
+    </section>
+
+    <footer class="site-footer">
+      <p>© George Brook. All rights reserved.</p>
+    </footer>
   </main>
 
   <script>
+    const randomColorBtn = document.getElementById('random-color-btn');
+    const resetBtn = document.getElementById('reset-btn');
+    const body = document.body;
+
+    const defaultColor = getComputedStyle(body).color;
+    const defaultFont = getComputedStyle(body).fontFamily;
+
+    function getRandomColor() {
+      const letters = '0123456789ABCDEF';
+      return '#' + Array.from({ length: 6 })
+        .map(() => letters[Math.floor(Math.random() * 16)])
+        .join('');
+    }
+
+    randomColorBtn.addEventListener('click', () => {
+      body.style.color = getRandomColor();
+    });
+
+    resetBtn.addEventListener('click', () => {
+      body.style.color = 'var(--text)';
+      body.style.fontFamily = defaultFont;
+    });
+
     const toggleButton = document.getElementById('themeToggle');
     const html = document.documentElement;
 
@@ -288,7 +358,6 @@
 
     window.addEventListener('resize', () => {
       resize();
-      // Redraw noise immediately after resize
       drawNoise();
     });
     resize();
@@ -302,7 +371,6 @@
       const g = parseInt(hex.substring(2, 4), 16);
       const b = parseInt(hex.substring(4, 6), 16);
       const a = 255;
-      // Return color as a 32-bit integer in ABGR order for easier manipulation
       return (a << 24) | (r << 16) | (g << 8) | b;
     }
 
@@ -337,10 +405,10 @@
               if (px >= canvas.width || py >= canvas.height) continue;
 
               const pixelIndex = (py * canvas.width + px) * 4;
-              buf[pixelIndex] = (color >> 16) & 0xFF;     // R
-              buf[pixelIndex + 1] = (color >> 8) & 0xFF;  // G
-              buf[pixelIndex + 2] = color & 0xFF;         // B
-              buf[pixelIndex + 3] = (color >> 24) & 0xFF; // A
+              buf[pixelIndex] = (color >> 16) & 0xFF;
+              buf[pixelIndex + 1] = (color >> 8) & 0xFF;
+              buf[pixelIndex + 2] = color & 0xFF;
+              buf[pixelIndex + 3] = (color >> 24) & 0xFF;
             }
           }
         }

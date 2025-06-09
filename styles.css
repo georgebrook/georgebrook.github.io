@@ -53,36 +53,46 @@
     }
 
     h1 {
-        font-size: 2.2rem;
+        font-size: 2.4rem;
         margin-bottom: 0.2rem;
-        color: var(--accent);
     }
 
     h2 {
         border-bottom: 2px solid var(--accent);
         padding-bottom: 0.2rem;
         margin-top: 2.5rem;
-        font-size: 1.4rem;
+        font-size: 1.8rem;
     }
 
     h3 {
         margin: 1.5rem 0 0.3rem;
-        font-size: 1.1rem;
-        color: var(--accent);
+        font-size: 1.4rem;
     }
 
-    .contact,
+    .intro {
+        font-style: italic;
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        gap: 20px;
+        padding: 10px 0;
+    }
+
+    .intro p {
+        margin: 0;
+    }
+
+    .intro img {
+        width: 200px;
+        border-radius: 100px;
+    }
+
     .meta {
         font-style: italic;
-        color: var(--muted);
     }
 
     ul {
         padding-left: 1.4rem;
-    }
-
-    a {
-        color: var(--accent);
     }
 
     a:hover {
@@ -90,7 +100,9 @@
     }
 
     .theme-toggle,
-    .font-toggle {
+    .font-toggle,
+    .color-toggle,
+    .reset-toggle {
         cursor: pointer;
         display: inline-flex;
         justify-content: center;
@@ -115,6 +127,14 @@
         right: 100px;
     }
 
+    .color-toggle {
+        right: 165px;
+    }
+
+    .reset-toggle {
+        right: 232px;
+    }
+
     .theme-toggle input {
         display: none;
     }
@@ -130,14 +150,33 @@
             font-size: 1.8rem;
         }
 
+        .intro {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 10px;
+        }
+
+        .intro img {
+            width: 100px;
+        }
+
         .theme-toggle,
-        .font-toggle {
-            top: auto;
-            bottom: 25px;
+        .font-toggle,
+        .color-toggle,
+        .reset-toggle {
+            top: 118    px;
             right: 23px;
         }
 
         .font-toggle {
             right: 89px;
+        }
+
+        .color-toggle {
+            right: 154px;
+        }
+
+        .reset-toggle {
+            right: 220px;
         }
     }
