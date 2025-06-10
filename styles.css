@@ -99,10 +99,7 @@
         text-decoration: underline;
     }
 
-    .theme-toggle,
-    .font-toggle,
-    .color-toggle,
-    .reset-toggle {
+    .fun-button {
         cursor: pointer;
         display: inline-flex;
         justify-content: center;
@@ -128,11 +125,11 @@
     }
 
     .color-toggle {
-        right: 165px;
+        right: 95px;
     }
 
     .reset-toggle {
-        right: 232px;
+        right: 202px;
     }
 
     .theme-toggle input {
@@ -142,7 +139,6 @@
     @media (max-width: 900px) {
         main {
             padding: 1.5rem 1rem 3rem;
-            background: none;
             box-shadow: none;
         }
 
@@ -160,10 +156,7 @@
             width: 100px;
         }
 
-        .theme-toggle,
-        .font-toggle,
-        .color-toggle,
-        .reset-toggle {
+        .fun-button {
             top: auto;
             bottom: 26px;
             right: 23px;
@@ -174,7 +167,7 @@
         }
 
         .color-toggle {
-            right: 154px;
+            right: 85px;
         }
 
         .reset-toggle {

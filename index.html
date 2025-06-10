@@ -24,7 +24,6 @@
   <meta name="twitter:image" content="https://yourdomain.com/og-image.jpg" />
 
   <link rel="icon" href="/favicon.ico" sizes="any" />
-  <link rel="icon" type="image/svg+xml" href="/icon.svg" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
 
@@ -56,63 +55,21 @@
 <body>
   <canvas class="noise"></canvas>
 
-  <button id="reset-btn" class="reset-toggle" aria-label="Randomise font">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-      <circle cx="12" cy="12" r="0" fill="currentColor">
-        <animate attributeName="r" dur="4s" values="0;2;0" repeatCount="indefinite" />
-      </circle>
-
-      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-        <path stroke-dasharray="48" stroke-dashoffset="48"
-          d="M4.25 14c0.89 3.45 4.02 6 7.75 6c4.42 0 8 -3.58 8 -8c0 -4.42 -3.58 -8 -8 -8c-2.39 0 -4.53 1.05 -6 2.71l-2 2.29">
-          <animate attributeName="stroke-dashoffset" dur="4s" values="48;0;48" repeatCount="indefinite" />
-        </path>
-
-        <path fill="currentColor" stroke-width="1" d="M5.63 7.38l0 0l0 0l0 0z" opacity="1">
-          <animate attributeName="d" dur="4s" values="
-          M5.63 7.38l0 0l0 0l0 0z;
-          M5.63 7.38L3.5 5.25L3.5 9.5L7.75 9.5z;
-          M5.63 7.38l0 0l0 0l0 0z" repeatCount="indefinite" />
-        </path>
-      </g>
-    </svg>
-
-  </button>
-
-  <button id="random-font-btn" class="font-toggle" aria-label="Randomise font">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-        <path stroke-dasharray="56" stroke-dashoffset="56" d="M3 21l2 -6l11 -11c1 -1 3 -1 4 0c1 1 1 3 0 4l-11 11l-6 2">
-          <animate attributeName="stroke-dashoffset" dur="4s" values="56;0;56" repeatCount="indefinite" />
-        </path>
-
-        <path stroke-dasharray="8" stroke-dashoffset="8" d="M15 5l4 4">
-          <animate attributeName="stroke-dashoffset" begin="0.3s" dur="4s" values="8;0;8" repeatCount="indefinite" />
-        </path>
-
-        <path stroke-dasharray="6" stroke-dashoffset="6" stroke-width="1" d="M6 15l3 3">
-          <animate attributeName="stroke-dashoffset" begin="0.3s" dur="4s" values="6;0;6" repeatCount="indefinite" />
-        </path>
-      </g>
-    </svg>
-
-  </button>
-
-  <button id="random-color-btn" class="color-toggle" aria-label="Randomise font">
+  <button id="random-color-btn" class="color-toggle fun-button" aria-label="Randomise font">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
       <path fill="none" stroke="currentColor" stroke-dasharray="28" stroke-dashoffset="28" stroke-linecap="round"
         stroke-linejoin="round" stroke-width="2" d="M12 3c0 0 7 6 7 12c0 2 -1 6 -7 6M12 3c0 0 -7 6 -7 12c0 2 1 6 7 6">
-        <animate attributeName="stroke-dashoffset" dur="4s" values="28;0;28" repeatCount="indefinite" />
+        <animate attributeName="stroke-dashoffset" dur="3s" values="28;0;28;" repeatCount="indefinite" />
       </path>
 
       <path fill="currentColor" fill-opacity="0"
         d="M12 3C12 3 15.27 5.81 17.34 9.5L6 18.41C5.21 17.24 5 15.91 5 15C5 9 12 3 12 3Z">
-        <animate attributeName="fill-opacity" begin="0s" dur="4s" values="0;0.3;0" repeatCount="indefinite" />
+        <animate attributeName="fill-opacity" dur="3s" values="0;0.3;0" repeatCount="indefinite" />
       </path>
     </svg>
   </button>
 
-  <label class="theme-toggle" for="themeToggle" aria-label="Toggle dark mode">
+  <label class="theme-toggle fun-button" for="themeToggle" aria-label="Toggle dark mode">
     <input type="checkbox" id="themeToggle" />
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
       <g fill="none" stroke="currentColor" stroke-dasharray="4" stroke-dashoffset="4" stroke-linecap="round"
@@ -299,11 +256,11 @@
 
   <script>
     const randomColorBtn = document.getElementById('random-color-btn');
-    const resetBtn = document.getElementById('reset-btn');
     const body = document.body;
+    const headings = document.getElementsByTagName('h2');
+    const buttons = document.querySelectorAll('.fun-button');
 
     const defaultColor = getComputedStyle(body).color;
-    const defaultFont = getComputedStyle(body).fontFamily;
 
     function getRandomColor() {
       const letters = '0123456789ABCDEF';
@@ -313,12 +270,16 @@
     }
 
     randomColorBtn.addEventListener('click', () => {
-      body.style.color = getRandomColor();
-    });
+      const color = getRandomColor();
+      body.style.color = color;
 
-    resetBtn.addEventListener('click', () => {
-      body.style.color = 'var(--text)';
-      body.style.fontFamily = defaultFont;
+      for (let heading of headings) {
+        heading.style.borderColor = color;
+      }
+
+      for (let button of buttons) {
+        button.style.color = color;
+      }
     });
 
     const toggleButton = document.getElementById('themeToggle');
@@ -431,37 +392,10 @@
 
     loop();
 
-    const googleFonts = [
-      "Roboto",
-      "Open Sans",
-      "Lato",
-      "Merriweather",
-      "Inter",
-      "Montserrat",
-      "Playfair Display",
-      "Raleway",
-      "Source Sans Pro",
-      "IBM Plex Sans"
-    ];
-
-    const fontBtn = document.getElementById('random-font-btn');
-
-    fontBtn.addEventListener('click', () => {
-      const font = googleFonts[Math.floor(Math.random() * googleFonts.length)];
-      const linkId = 'google-font-link';
-
-      const existingLink = document.getElementById(linkId);
-      if (existingLink) existingLink.remove();
-
-      const fontLink = document.createElement('link');
-      fontLink.id = linkId;
-      fontLink.rel = 'stylesheet';
-      fontLink.href = `https://fonts.googleapis.com/css2?family=${font.replace(/ /g, '+')}&display=swap`;
-      document.head.appendChild(fontLink);
-
-      document.body.style.fontFamily = `'${font}', sans-serif`;
-    });
-
+console.log(
+  "%c🧑🏼‍💻🕹️🎾🥁👟🎹🛹🥩🥤🍿",
+  "font-size: 100px;"
+);
   </script>
 </body>
 
