@@ -27,9 +27,11 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 
   <script type="application/ld+json">
     {
@@ -49,7 +51,247 @@
       }
     }
   </script>
-  <link rel="stylesheet" href="./styles.css">
+  <style>
+    :root {
+      --text: #2f2f2f;
+      --bg: #ffffff;
+      --accent: #010101;
+      --muted: #666;
+      --shadow: #d6d6d6;
+    }
+
+    [data-theme="dark"] {
+      --text: #eaeaea;
+      --bg: #121212;
+      --accent: #eaeaea;
+      --muted: #aaa;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Montserrat", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    header svg {
+      width: 40px;
+      height: 40px;
+    }
+
+    header h1 {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    canvas {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 1.5rem 3rem;
+      background: var(--bg);
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 0.2rem;
+      font-family: "Chivo Mono", monospace;
+      font-optical-sizing: auto;
+      font-style: normal;
+    }
+
+    h2 {
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.2rem;
+      margin-top: 2.5rem;
+      font-size: 1.8rem;
+      font-family: "Chivo Mono", monospace;
+      font-optical-sizing: auto;
+      font-style: normal;
+    }
+
+    h3 {
+      margin: 1.5rem 0 0.3rem;
+      font-size: 1.4rem;
+      font-family: "Chivo Mono", monospace;
+      font-optical-sizing: auto;
+      font-style: normal;
+    }
+
+    .intro {
+      font-style: italic;
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      gap: 20px;
+      padding: 10px 0;
+    }
+
+    .intro p {
+      margin: 0;
+    }
+
+    .intro img {
+      width: 200px;
+      border-radius: 100px;
+    }
+
+    .meta {
+      font-style: italic;
+    }
+
+    ul {
+      padding-left: 1.4rem;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .fun-button {
+      cursor: pointer;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      user-select: none;
+      width: 48px;
+      height: 48px;
+      color: var(--text);
+      position: fixed;
+      bottom: 23px;
+      top: 23px;
+      right: 34px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .font-toggle {
+      right: 100px;
+    }
+
+    .color-toggle {
+      right: 95px;
+    }
+
+    .reset-toggle {
+      right: 202px;
+    }
+
+    .theme-toggle input {
+      display: none;
+    }
+
+    .image-border {
+      padding: 6px;
+      width: 570px;
+      display: flex;
+      border-radius: 50%;
+      background: linear-gradient(45deg, #48006d, #4d75ff, #66fff5, #23cc68, #e6ff6c);
+      background-size: 300% 300%;
+      animation: gradientFlow 10s ease infinite;
+    }
+
+    @keyframes gradientFlow {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .image-border--mobile {
+      display: none;
+      width: 100px;
+    }
+
+    .image-border img {
+      border-radius: 50%;
+      border: 5px solid var(--bg);
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    @media (max-width: 999px) {
+      .image-border img {
+        border-width: 4px;
+      }
+
+      .image-border--mobile {
+        display: flex;
+        padding: 3px;
+      }
+
+      .image-border--desktop,
+      .cv-icon {
+        display: none;
+      }
+
+      main {
+        padding: 1.5rem 1rem 3rem;
+        box-shadow: none;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+        line-height: 1.4;
+      }
+
+      .intro {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+      }
+
+      .intro img {
+        width: 100px;
+      }
+
+      .fun-button {
+        top: auto;
+        bottom: 26px;
+        right: 23px;
+      }
+
+      .font-toggle {
+        right: 89px;
+      }
+
+      .color-toggle {
+        right: 85px;
+      }
+
+      .reset-toggle {
+        right: 220px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -132,7 +374,11 @@
   <main>
     <header>
       <h1>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <a href="https://www.instagram.com/picsofgeorge" class="image-border image-border--mobile" target="_blank"
+          rel="noopener noreferrer">
+          <img class="image-mobile" src="me-colour.jpg" alt="An image of me with a great view.">
+        </a>
+        <svg class="cv-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
           <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
             <path stroke-dasharray="64" stroke-dashoffset="64"
               d="M13.5 3l5.5 5.5v11.5c0 0.55 -0.45 1 -1 1h-12c-0.55 0 -1 -0.45 -1 -1v-16c0 -0.55 0.45 -1 1 -1Z">
@@ -154,7 +400,10 @@
         George Brook
       </h1>
       <div class="intro">
-        <img src="me-colour.jpg" alt="An image of me with a great view.">
+        <a href="https://www.instagram.com/picsofgeorge" class="image-border image-border--desktop" target="_blank"
+          rel="noopener noreferrer">
+          <img class="image-mobile" src="me-colour.jpg" alt="An image of me with a great view.">
+        </a>
         <p>I'm a Front-End Developer with over 10 years of experience building responsive, accessible, and
           high-performance web interfaces. I have a strong passion for structured, reusable components and maintainable
           front-end architecture. In my free time, I enjoy playing tennis.</p>
@@ -392,10 +641,10 @@
 
     loop();
 
-console.log(
-  "%c🧑🏼‍💻🕹️🎾🥁👟🎹🛹🥩🥤🍿",
-  "font-size: 100px;"
-);
+    console.log(
+      "%c🧑🏼‍💻🕹️🎾🥁👟🎹🛹🥩🥤🍿",
+      "font-size: 100px;"
+    );
   </script>
 </body>
 
