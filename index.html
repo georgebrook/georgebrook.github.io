@@ -22,6 +22,8 @@
   <meta name="twitter:description"
     content="Explore the CV of George Brook, a front-end developer specializing in accessible, performant, and user-focused web experiences." />
   <meta name="twitter:image" content="https://yourdomain.com/og-image.jpg" />
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
 
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -76,7 +78,7 @@
       font-family: "Montserrat", sans-serif;
       font-optical-sizing: auto;
       font-style: normal;
-      font-size: 1.2rem;
+      font-size: 1rem;
       line-height: 1.6;
       color: var(--text);
       background: var(--bg);
@@ -258,9 +260,10 @@
         box-shadow: none;
       }
 
-      h1 {
+      header h1 {
         font-size: 1.8rem;
         line-height: 1.4;
+        gap: 20px;
       }
 
       .intro {
@@ -404,9 +407,9 @@
           rel="noopener noreferrer">
           <img class="image-mobile" src="me-colour.jpg" alt="An image of me with a great view.">
         </a>
-        <p>I'm a Front-End Developer with over 10 years of experience building responsive, accessible, and
+        <p>I'm a Front-End Developer, building responsive, accessible, and
           high-performance web interfaces. I have a strong passion for structured, reusable components and maintainable
-          front-end architecture. In my free time, I enjoy playing tennis.</p>
+          front-end architecture. In my free time, I enjoy playing tennis, piano and drums.</p>
       </div>
     </header>
 
@@ -453,6 +456,17 @@
     </section>
 
     <section>
+      <h2>Technical Proficiency</h2>
+      <ul>
+        <li><strong>Front-End:</strong> React, Next.js, TypeScript, JS (ES6+), VueJS, HTML, CSS, SASS, Twig</li>
+        <li><strong>Workflow:</strong> Webpack, Git, CI/CD, GitHub Actions, Agile, Atomic Design</li>
+        <li><strong>Platforms:</strong> Drupal, Headless CMS, REST/JSON APIs</li>
+        <li><strong>Accessibility:</strong> WCAG 2.1/2.2, BEM, Semantic HTML</li>
+        <li><strong>DevOps:</strong> Docker, DDEV, Linux, NGINX, PHP, MySQL</li>
+      </ul>
+    </section>
+
+    <section>
       <h2>Fun Stuff</h2>
       <ul>
         <li><a target="_blank" href="https://devtools-ecru.vercel.app/elements" target="_blank">Chrome Devtools
@@ -470,17 +484,6 @@
         </li>
         <li><a target="_blank" rel="noopener noreferrer" href="https://codepen.io/georgebrook/full/MrdEbW">JavaScript
             Diamond Pattern</a></li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Technical Proficiency</h2>
-      <ul>
-        <li><strong>Front-End:</strong> React, Next.js, TypeScript, JS (ES6+), VueJS, HTML, CSS, SASS, Twig</li>
-        <li><strong>Workflow:</strong> Webpack, Git, CI/CD, GitHub Actions, Agile, Atomic Design</li>
-        <li><strong>Platforms:</strong> Drupal, Headless CMS, REST/JSON APIs</li>
-        <li><strong>Accessibility:</strong> WCAG 2.1/2.2, BEM, Semantic HTML</li>
-        <li><strong>DevOps:</strong> Docker, DDEV, Linux, NGINX, PHP, MySQL</li>
       </ul>
     </section>
 
@@ -534,8 +537,22 @@
     const toggleButton = document.getElementById('themeToggle');
     const html = document.documentElement;
 
+    function updateMetaThemeColor(theme) {
+      const themeColor = theme === 'dark' ? '#121212' : '#ffffff';
+      let metaTag = document.querySelector('meta[name="theme-color"]');
+
+      if (!metaTag) {
+        metaTag = document.createElement('meta');
+        metaTag.name = 'theme-color';
+        document.head.appendChild(metaTag);
+      }
+
+      metaTag.setAttribute('content', themeColor);
+    }
+
     const applyTheme = (theme) => {
       html.setAttribute('data-theme', theme);
+      updateMetaThemeColor(theme);
     };
 
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
