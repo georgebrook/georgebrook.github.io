@@ -204,13 +204,24 @@
     }
 
     .image-border {
+      --gradient: linear-gradient(45deg, #48006d, #4d75ff, #66fff5, #23cc68, #e6ff6c);
       padding: 6px;
       width: 570px;
       display: flex;
       border-radius: 50%;
-      background: linear-gradient(45deg, #48006d, #4d75ff, #66fff5, #23cc68, #e6ff6c);
+      background: var(--gradient);
       background-size: 300% 300%;
-      animation: gradientFlow 10s ease infinite;
+      animation: gradientFlow 5s ease infinite;
+      transition: animation-duration 0.3s ease;
+      cursor: pointer;
+    }
+
+    .image-border.clicked {
+      --gradient: linear-gradient(45deg, #ff4e50, #fc913a, #f9d423, #ff6b6b, #ffe259);
+    }
+
+    .image-border:hover {
+      animation-duration: 3s;
     }
 
     @keyframes gradientFlow {
@@ -377,8 +388,8 @@
   <main>
     <header>
       <h1>
-        <a href="https://www.instagram.com/picsofgeorge" class="image-border image-border--mobile" target="_blank"
-          rel="noopener noreferrer">
+        <a href="#" class="image-border image-border--mobile" role="button" aria-pressed="false"
+          onclick="event.preventDefault(); this.classList.toggle('clicked'); this.setAttribute('aria-pressed', this.classList.contains('clicked'));">
           <img class="image-mobile" src="me-colour.jpg" alt="An image of me with a great view.">
         </a>
         <svg class="cv-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -403,8 +414,8 @@
         George Brook
       </h1>
       <div class="intro">
-        <a href="https://www.instagram.com/picsofgeorge" class="image-border image-border--desktop" target="_blank"
-          rel="noopener noreferrer">
+        <a href="#" class="image-border image-border--desktop" role="button" aria-pressed="false"
+          onclick="event.preventDefault(); this.classList.toggle('clicked'); this.setAttribute('aria-pressed', this.classList.contains('clicked'));">
           <img class="image-mobile" src="me-colour.jpg" alt="An image of me with a great view.">
         </a>
         <p>I'm a Front End Developer, building responsive, accessible, and
@@ -471,8 +482,8 @@
       <ul>
         <li><a target="_blank" href="https://devtools-ecru.vercel.app/elements" target="_blank">Chrome Devtools
             built in VueJS/Nuxt</a></li>
-        <li><a target="_blank" href="https://github.com/georgebrook/kyc-chat-app" target="_blank">React/NextJS
-            Realtime DB with QR code to chat on same Wifi</a></li>
+        <li><a target="_blank" href="https://github.com/georgebrook/kyc-chat-app" target="_blank">QR code to chat on
+            same Wifi</a></li>
         <li><a target="_blank" rel="noopener noreferrer" href="https://codepen.io/georgebrook/full/mqexXB">CSS
             Seamless Animated Text</a></li>
         <li><a target="_blank" rel="noopener noreferrer" href="https://codepen.io/georgebrook/full/jrLXvP">CSS
@@ -491,7 +502,7 @@
       <h2>More About Me</h2>
       <p>
         When I’m not coding, I enjoy running long distances, playing tennis (both competitively and for fun), and
-        perfecting my homemade lasagne recipe. Here are some other links.
+        perfecting my homemade lasagne recipe. Here are some other links. I also enjoy drawing.
       </p>
       <ul>
         <li><a href="https://imgur.com/a/artwork-drf0g" target="_blank" rel="noopener">Artwork</a></li>
@@ -502,7 +513,7 @@
     </section>
 
     <footer class="site-footer">
-      <p>© George Brook. All rights reserved.</p>
+      <p>I hope you like my site.</p>
     </footer>
   </main>
 
