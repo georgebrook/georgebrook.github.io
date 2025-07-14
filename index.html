@@ -86,6 +86,10 @@
       background: var(--bg);
     }
 
+    a {
+      color: var(--text);
+    }
+
     header svg {
       width: 40px;
       height: 40px;
@@ -136,6 +140,10 @@
       font-family: "Chivo Mono", monospace;
       font-optical-sizing: auto;
       font-style: normal;
+    }
+
+    p {
+      margin: 0;
     }
 
     .intro {
@@ -298,11 +306,6 @@
         right: 220px;
       }
     }
-
-    .charts {
-      display: flex;
-      gap: 20px;
-    }
   </style>
 </head>
 
@@ -386,8 +389,14 @@
   <main>
     <header>
       <h1>
-        <a href="#" class="image-border image-border--mobile" role="button" aria-pressed="false"
-          onclick="event.preventDefault(); this.classList.toggle('clicked'); this.setAttribute('aria-pressed', this.classList.contains('clicked'));">
+        <a href="#" class="image-border image-border--mobile" role="button" aria-pressed="false" onclick="
+    event.preventDefault();
+    const img = this.querySelector('img');
+    const isClicked = this.classList.toggle('clicked');
+    this.setAttribute('aria-pressed', isClicked);
+    img.src = isClicked ? 'me-black-and-white.jpg' : 'me3.webp';
+    img.alt = isClicked ? 'A colour version of me.' : 'An image of me with a great view.';
+  ">
           <img class="image-mobile" src="me3.webp" alt="An image of me with a great view.">
         </a>
         <svg class="cv-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -412,21 +421,39 @@
         George Brook
       </h1>
       <div class="intro">
-        <a href="#" class="image-border image-border--desktop" role="button" aria-pressed="false"
-          onclick="event.preventDefault(); this.classList.toggle('clicked'); this.setAttribute('aria-pressed', this.classList.contains('clicked'));">
+        <a href="#" class="image-border image-border--desktop" role="button" aria-pressed="false" onclick="
+    event.preventDefault();
+    const img = this.querySelector('img');
+    const isClicked = this.classList.toggle('clicked');
+    this.setAttribute('aria-pressed', isClicked);
+    img.src = isClicked ? 'me-black-and-white.jpg' : 'me3.webp';
+    img.alt = isClicked ? 'A colour version of me.' : 'An image of me with a great view.';
+  ">
           <img class="image-mobile" src="me3.webp" alt="An image of me with a great view.">
         </a>
-        <p>
-          I am a seasoned Front-End Developer specializing in building responsive, accessible, and high-performance web
-          interfaces. I have a strong commitment to developing scalable, maintainable, and reusable component
-          architectures. Outside of work, I enjoy playing tennis, piano, and drums, which fuel my creativity and
-          discipline.
-        </p>
+        <div class="blurb">
+          <p>
+            Front-end developer with 10+ years' experience building scalable, high-performance web applications.
+            Passionate about clean, accessible UI, fast load times, and efficient developer workflows. Advocate for
+            design
+            systems, modern JavaScript tooling, and front-end architecture. Accessibility enthusiast. I enjoy mentoring,
+            pair programming, and improving team standards.
+            Currently upskilling on uses for AI and all front end technologies.
+          </p>
+          <br>
+          <p>
+            Most recent personal public project: <a
+              href="https://devtools-ecru.vercel.app">https://devtools-ecru.vercel.app</a>
+          </p>
+        </div>
       </div>
 
       <section>
         <h2>Education</h2>
         <p><strong>Bachelor of Science (Physics, Upper Second Class Honours)</strong><br>University of Bath — 2012</p>
+        <p><em>Dissertation: Investigating Noise and Underwater Acoustics in the Deep Sea.
+            Built MATLAB algorithms to analyze signal data.</em>
+        </p>
       </section>
 
       <section>
@@ -434,47 +461,41 @@
 
         <h3>Catch Digital (London, UK – Remote)</h3>
         <p><strong>Senior Front-End Developer</strong> · March 2022 – May 2025</p>
-        <p><strong>Key Clients:</strong> IOP, TTTech Auto, Framestore, Ashmore Group, Countryside Ski & Climb, My
-          Business Stream, Norton Abrasives, Highland Park Whisky, Wyoming Whiskey, SES, IAB UK, Edrington Distilleries,
-          The Macallan</p>
         <ul>
-          <li>Architected and implemented modular, scalable front-end architectures based on atomic design principles,
-            utilizing Storybook to streamline component reuse and maintainability.</li>
-          <li>Elevated site performance and user experience by applying advanced code-splitting and optimizing CI/CD
-            pipelines, reducing load times by up to 50%.</li>
-          <li>Led secure JWT authentication integrations with headless CMSs and RESTful APIs, enhancing data security
-            and seamless user sessions.</li>
-          <li>Designed and developed reusable, accessible e-commerce components, accelerating development cycles and
-            improving customer engagement metrics.</li>
-          <li>Mentored junior developers and promoted best practices in accessibility, ensuring compliance with WCAG 2.1
-            standards across projects.</li>
-          <li>Spearheaded complex webform and user journey design for enterprise clients, delivering tailored solutions
-            for large-scale user bases.</li>
+          <li>Designed and implemented modular front-end systems across enterprise-scale websites.</li>
+          <li>Spearheaded the adoption of atomic design principles and scalable component libraries using Storybook and
+            modern CSS architecture (BEM).</li>
+          <li>Optimized page performance across 20+ websites, reducing load times through code splitting and
+            performance-first tooling.</li>
+          <li>Modernized build pipelines with Webpack, GitHub Actions, and CI/CD workflows, improving developer
+            efficiency.</li>
+          <li>Led the integration of headless CMS platforms and third-party APIs, including secure authentication flows
+            with JWT.</li>
+          <li>Built reusable React components for e-commerce tools like shopping carts and dynamic product filters.</li>
+          <li>Mentored junior developers on JavaScript best practices and accessibility standards.</li>
+          <li>Regularly led client demos and translated complex technical solutions into business-aligned outcomes.</li>
         </ul>
-        <p><strong>Selected Projects:</strong></p>
-        <p><em>My Business Stream Portal:</em> Built a React-based self-service platform featuring JWT-secured
-          authentication and a robust modular component system.</p>
-        <p><em>The Macallan Global Website:</em> Delivered front-end support for a scalable Drupal + Next.js hybrid
-          site, leveraging JSON API for efficient data fetching.</p>
-        <p><strong>Reason for Leaving:</strong> Company restructure and merger.</p>
+
+        <p><strong>Notable Projects/Clients:</strong></p>
+        <p><em>My Business Stream (Scottish Water), IOP, Norton Abrasives, Edrington Digital Platform, SES, IAB UK,
+            TTTech Auto, Framestore, Ashmore Group</p>
+        <small><strong>Reason for Leaving:</strong> Company restructure and merger.</small>
 
         <h3>Zoocha Ltd (Hertford, UK – Remote)</h3>
-        <p><strong>Mid/Senior Front-End Developer</strong> · March 2014 – February 2022</p>
-        <p><strong>Key Clients:</strong> Greater London Authority, Ofsted, FCA, Falmouth University, Visit Britain,
-          BFBS, Royal Marsden, Visit Jersey, National Forest, Topdeck Travel</p>
+        <p><strong>Mid → Senior Front-End Developer</strong> · March 2014 – February 2022</p>
         <ul>
-          <li>Delivered fully accessible front-end solutions (WCAG AAA) for high-profile public sector and financial
-            services clients, improving inclusivity and compliance.</li>
-          <li>Pioneered prototyping initiatives to explore and integrate cutting-edge JavaScript frameworks and CSS
-            techniques, accelerating innovation cycles.</li>
-          <li>Advocated for and implemented modular, component-driven UI development workflows, enhancing
-            maintainability and scalability.</li>
-          <li>Led performance optimization efforts, introducing tooling and automated testing practices that improved
-            site responsiveness and developer efficiency.</li>
-          <li>Provided ongoing mentorship, fostering a culture of learning and technical excellence within
-            cross-functional teams.</li>
+          <li>Delivered front-end solutions for high-traffic websites, including public sector and finance projects.
+          </li>
+          <li>Led compliance efforts for accessibility (AAA/WCAG) and legal standards.</li>
+          <li>Developed prototypes and MVPs using the latest front-end stacks.</li>
+          <li>Advocated for and implemented atomic design systems and reusable UI components.</li>
+          <li>Coached team members on writing scalable, maintainable code using modern HTML, CSS, and JavaScript
+            standards.</li>
         </ul>
-        <p><strong>Reason for Leaving:</strong> Transition to UK-only office model while based in South Africa.</p>
+        <p><strong>Notable Projects/Clients:</strong></p>
+        <p><em>Greater London Authority, TalkLondon, Ofsted Reports, FCA, Falmouth University, Visit Britain, Visit
+            Jersey, Ofsted Parent View</p>
+        <small><strong>Reason for Leaving:</strong> Transition to UK-only office model while based in South Africa.</small>
       </section>
 
       <section>
@@ -496,34 +517,6 @@
             AWS (Amplify, EC2, S3), Acquia Cloud, Pantheon, DigitalOcean, Vercel</li>
           <li><strong>Analytics &amp; Monitoring</strong><br> Google Analytics, Sentry</li>
         </ul>
-        <div class="charts">
-          <div class="chart">
-            <h3>JS</h3>
-            <canvas id="jsChart"></canvas>
-          </div>
-          <div class="chart">
-            <h3>CSS</h3>
-            <canvas id="cssChart"></canvas>
-          </div>
-          <div class="chart">
-            <h3>HTML</h3>
-            <canvas id="htmlChart"></canvas>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2>Personal Projects & Experiments</h2>
-        <ul>
-          <li><a target="_blank" href="https://devtools-ecru.vercel.app/elements">Chrome DevTools built with
-              VueJS/Nuxt</a></li>
-          <li><a target="_blank" href="https://github.com/georgebrook/kyc-chat-app">QR Code Chat App on Same Wi-Fi</a>
-          </li>
-          <li><a target="_blank" rel="noopener noreferrer" href="https://codepen.io/georgebrook/full/mqexXB">CSS
-              Seamless Animated Text</a></li>
-          <li><a target="_blank" rel="noopener noreferrer" href="https://codepen.io/georgebrook/full/jrLXvP">CSS Digital
-              Countdown</a></li>
-        </ul>
       </section>
 
       <section class="personal-info">
@@ -533,6 +526,8 @@
           homemade lasagne recipe. I am also passionate about art and music, and love exploring new creative outlets.
         </p>
         <ul>
+          <li><a href="https://codepen.io/georgebrook/pen/mqexXB" target="_blank" rel="noopener">Codepen</a></li>
+          <li><a href="https://github.com/georgebrook" target="_blank" rel="noopener">Github</a></li>
           <li><a href="https://imgur.com/a/artwork-drf0g" target="_blank" rel="noopener">Artwork Portfolio</a></li>
           <li><a href="https://soundcloud.com/zzxxccii" target="_blank" rel="noopener">Music</a></li>
           <li><a href="https://www.drupal.org/u/georgebrook" target="_blank" rel="noopener">Drupal Profile</a></li>
@@ -623,18 +618,8 @@
     const density = 0.25;
     let imgData;
 
-    function resize() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      imgData = ctx.createImageData(canvas.width, canvas.height);
-      ctx.imageSmoothingEnabled = false;
-    }
-
-    window.addEventListener('resize', () => {
-      resize();
-      drawNoise();
-    });
-    resize();
+    // Check for desktop
+    const isDesktop = () => window.innerWidth >= 1024;
 
     function hexToRGBA(hex) {
       hex = hex.replace('#', '');
@@ -646,14 +631,6 @@
       const b = parseInt(hex.substring(4, 6), 16);
       const a = 255;
       return (a << 24) | (r << 16) | (g << 8) | b;
-    }
-
-    function getThemeColors() {
-      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-      return {
-        bgColor: isDark ? '#1d1d1d' : '#f8f8f8',
-        fgColor: isDark ? '#2d2d2d' : '#e9e9e9'
-      };
     }
 
     function drawNoise() {
@@ -690,134 +667,32 @@
       ctx.putImageData(imgData, 0, 0);
     }
 
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      imgData = ctx.createImageData(canvas.width, canvas.height);
+      ctx.imageSmoothingEnabled = false;
+    }
+
+    // Only start noise effect on desktop
+    if (isDesktop()) {
+      resize();
+      drawNoise();
+      loop();
+    }
+
+    // Update on resize if still desktop
+    window.addEventListener('resize', () => {
+      if (isDesktop()) {
+        resize();
+        drawNoise();
+      }
+    });
+
     function loop() {
       drawNoise();
       requestAnimationFrame(loop);
     }
-
-    loop();
-
-    // Create radial gradient between two colors (same as before)
-    function createGradient(ctx, area, colorStart, colorEnd) {
-      const gradient = ctx.createRadialGradient(
-        area.width / 2,
-        area.height / 2,
-        0,
-        area.width / 2,
-        area.height / 2,
-        area.width / 2
-      );
-      gradient.addColorStop(0, colorStart);
-      gradient.addColorStop(1, colorEnd);
-      return gradient;
-    }
-
-    function createDoughnutChart(canvasId, labels, dataValues, gradientColors) {
-      const ctx = document.getElementById(canvasId).getContext('2d');
-      const area = ctx.canvas;
-
-      const backgrounds = gradientColors.map(colors =>
-        createGradient(ctx, area, colors[0], colors[1])
-      );
-
-      return new Chart(ctx, {
-        type: 'doughnut',
-        data: {
-          labels: labels,
-          datasets: [{
-            data: dataValues,
-            backgroundColor: backgrounds,
-            borderColor: '#fff',
-            borderWidth: 2
-          }]
-        },
-        options: {
-          responsive: true,
-          animation: {
-            duration: 1000,
-            easing: 'easeOutQuad'
-          },
-          plugins: {
-            legend: { display: false },
-            tooltip: {
-              callbacks: {
-                title: () => '',
-                label: context => context.label
-              }
-            }
-          }
-        }
-      });
-    }
-
-    // Setup Intersection Observer to watch canvases
-    function animateWhenVisible(canvasId, labels, dataValues, gradientColors) {
-      const canvas = document.getElementById(canvasId);
-      let chartInstance = null;
-
-      const observer = new IntersectionObserver((entries, observerSelf) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting && !chartInstance) {
-            // Create chart on first scroll into view
-            chartInstance = createDoughnutChart(canvasId, labels, dataValues, gradientColors);
-            observerSelf.unobserve(canvas);
-          }
-        });
-      }, {
-        threshold: 0.3 // Trigger when about 30% of the canvas is visible
-      });
-
-      observer.observe(canvas);
-    }
-
-    const jsGradients = [
-      ['#ff66cc', '#ff99e6'],
-      ['#a8ff60', '#d4ff7f'],
-      ['#7dd3fc', '#38bdf8'],
-      ['#a78bfa', '#c4b5fd']
-    ];
-
-    const cssGradients = [
-      ['#f9a8d4', '#f472b6'],
-      ['#fde68a', '#fcd34d'],
-      ['#a8ff60', '#bef264'],
-      ['#fbcfe8', '#f9a8d4'],
-      ['#86efac', '#4ade80'],
-      ['#fef3c7', '#fde68a'],
-      ['#7dd3fc', '#38bdf8'],
-      ['#bfdbfe', '#93c5fd'],
-      ['#fed7aa', '#fcd34d']
-    ];
-
-    const htmlGradients = [
-      ['#f9a8d4', '#f472b6'],
-      ['#86efac', '#4ade80'],
-      ['#7dd3fc', '#38bdf8'],
-      ['#fbcfe8', '#f9a8d4'],
-      ['#fde68a', '#fcd34d']
-    ];
-
-    // Use Intersection Observer to animate charts when scrolled into view
-    animateWhenVisible(
-      'jsChart',
-      ['Next.js', 'Nuxt.js', 'Svelte', 'TypeScript'],
-      [35, 20, 15, 30],
-      jsGradients
-    );
-
-    animateWhenVisible(
-      'cssChart',
-      ['Tailwind', 'Preprocessing', 'SCSS', 'BEM', 'Cross-browser awareness', 'Bootstrap', 'Responsiveness', 'LESS', 'Animations'],
-      [25, 25, 25, 10, 25, 5, 25, 5, 15],
-      cssGradients
-    );
-
-    animateWhenVisible(
-      'htmlChart',
-      ['Semantic HTML', 'Accessibility', 'Meta data', 'Microdata', 'Forms'],
-      [25, 25, 10, 5, 15],
-      htmlGradients
-    );
 
     console.log(
       "%c🧑🏼‍💻🕹️🎾🥁👟🎹🛹🥩🥤🍿",
