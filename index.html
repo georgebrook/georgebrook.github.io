@@ -53,6 +53,8 @@
       }
     }
   </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     :root {
       --text: #2f2f2f;
@@ -96,7 +98,7 @@
       gap: 10px;
     }
 
-    canvas {
+    .background-noise {
       position: fixed;
       inset: 0;
       z-index: -1;
@@ -296,11 +298,16 @@
         right: 220px;
       }
     }
+
+    .charts {
+      display: flex;
+      gap: 20px;
+    }
   </style>
 </head>
 
 <body>
-  <canvas class="noise"></canvas>
+  <canvas class="background-noise"></canvas>
 
   <button id="random-color-btn" class="color-toggle fun-button" aria-label="Randomise font">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -475,7 +482,8 @@
         <ul>
           <li><strong>Languages &amp; Frameworks</strong><br> React, Next.js, Vue.js, Svelte, TypeScript, JavaScript
             (ES6+), HTML5, CSS3, SASS, Tailwind CSS, jQuery, Twig</li>
-          <li><strong>Component &amp; UI Development</strong><br> Storybook, Atomic Design, BEM methodology, Accessible UI
+          <li><strong>Component &amp; UI Development</strong><br> Storybook, Atomic Design, BEM methodology, Accessible
+            UI
             (WCAG 2.1/2.2), Semantic HTML</li>
           <li><strong>Testing &amp; Quality Assurance</strong><br> Jest, React Testing Library, Playwright, Pa11y,
             Lighthouse, ESLint, Stylelint, Prettier</li>
@@ -483,10 +491,25 @@
           <li><strong>Version Control &amp; Collaboration</strong><br> Git, GitHub, Bitbucket, Azure DevOps, Jira,
             Confluence, Agile/Scrum, Code Reviews, Mentorship</li>
           <li><strong>CMS &amp; Platforms</strong><br> Drupal, WordPress, Prismic</li>
-          <li><strong>DevOps &amp; Backend</strong><br> PHP, PHPStan, Composer, MySQL, Docker, DDEV, Linux, NGINX, Jenkins,
+          <li><strong>DevOps &amp; Backend</strong><br> PHP, PHPStan, Composer, MySQL, Docker, DDEV, Linux, NGINX,
+            Jenkins,
             AWS (Amplify, EC2, S3), Acquia Cloud, Pantheon, DigitalOcean, Vercel</li>
           <li><strong>Analytics &amp; Monitoring</strong><br> Google Analytics, Sentry</li>
         </ul>
+        <div class="charts">
+          <div class="chart">
+            <h3>JS</h3>
+            <canvas id="jsChart"></canvas>
+          </div>
+          <div class="chart">
+            <h3>CSS</h3>
+            <canvas id="cssChart"></canvas>
+          </div>
+          <div class="chart">
+            <h3>HTML</h3>
+            <canvas id="htmlChart"></canvas>
+          </div>
+        </div>
       </section>
 
       <section>
@@ -593,7 +616,7 @@
       }
     });
 
-    const canvas = document.querySelector('canvas');
+    const canvas = document.querySelector('.background-noise');
     const ctx = canvas.getContext('2d');
 
     const dotSize = 1;
@@ -673,6 +696,128 @@
     }
 
     loop();
+
+    // Create radial gradient between two colors (same as before)
+    function createGradient(ctx, area, colorStart, colorEnd) {
+      const gradient = ctx.createRadialGradient(
+        area.width / 2,
+        area.height / 2,
+        0,
+        area.width / 2,
+        area.height / 2,
+        area.width / 2
+      );
+      gradient.addColorStop(0, colorStart);
+      gradient.addColorStop(1, colorEnd);
+      return gradient;
+    }
+
+    function createDoughnutChart(canvasId, labels, dataValues, gradientColors) {
+      const ctx = document.getElementById(canvasId).getContext('2d');
+      const area = ctx.canvas;
+
+      const backgrounds = gradientColors.map(colors =>
+        createGradient(ctx, area, colors[0], colors[1])
+      );
+
+      return new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: labels,
+          datasets: [{
+            data: dataValues,
+            backgroundColor: backgrounds,
+            borderColor: '#fff',
+            borderWidth: 2
+          }]
+        },
+        options: {
+          responsive: true,
+          animation: {
+            duration: 1000,
+            easing: 'easeOutQuad'
+          },
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                title: () => '',
+                label: context => context.label
+              }
+            }
+          }
+        }
+      });
+    }
+
+    // Setup Intersection Observer to watch canvases
+    function animateWhenVisible(canvasId, labels, dataValues, gradientColors) {
+      const canvas = document.getElementById(canvasId);
+      let chartInstance = null;
+
+      const observer = new IntersectionObserver((entries, observerSelf) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !chartInstance) {
+            // Create chart on first scroll into view
+            chartInstance = createDoughnutChart(canvasId, labels, dataValues, gradientColors);
+            observerSelf.unobserve(canvas);
+          }
+        });
+      }, {
+        threshold: 0.3 // Trigger when about 30% of the canvas is visible
+      });
+
+      observer.observe(canvas);
+    }
+
+    const jsGradients = [
+      ['#ff66cc', '#ff99e6'],
+      ['#a8ff60', '#d4ff7f'],
+      ['#7dd3fc', '#38bdf8'],
+      ['#a78bfa', '#c4b5fd']
+    ];
+
+    const cssGradients = [
+      ['#f9a8d4', '#f472b6'],
+      ['#fde68a', '#fcd34d'],
+      ['#a8ff60', '#bef264'],
+      ['#fbcfe8', '#f9a8d4'],
+      ['#86efac', '#4ade80'],
+      ['#fef3c7', '#fde68a'],
+      ['#7dd3fc', '#38bdf8'],
+      ['#bfdbfe', '#93c5fd'],
+      ['#fed7aa', '#fcd34d']
+    ];
+
+    const htmlGradients = [
+      ['#f9a8d4', '#f472b6'],
+      ['#86efac', '#4ade80'],
+      ['#7dd3fc', '#38bdf8'],
+      ['#fbcfe8', '#f9a8d4'],
+      ['#fde68a', '#fcd34d']
+    ];
+
+    // Use Intersection Observer to animate charts when scrolled into view
+    animateWhenVisible(
+      'jsChart',
+      ['Next.js', 'Nuxt.js', 'Svelte', 'TypeScript'],
+      [35, 20, 15, 30],
+      jsGradients
+    );
+
+    animateWhenVisible(
+      'cssChart',
+      ['Tailwind', 'Preprocessing', 'SCSS', 'BEM', 'Cross-browser awareness', 'Bootstrap', 'Responsiveness', 'LESS', 'Animations'],
+      [25, 25, 25, 10, 25, 5, 25, 5, 15],
+      cssGradients
+    );
+
+    animateWhenVisible(
+      'htmlChart',
+      ['Semantic HTML', 'Accessibility', 'Meta data', 'Microdata', 'Forms'],
+      [25, 25, 10, 5, 15],
+      htmlGradients
+    );
 
     console.log(
       "%c🧑🏼‍💻🕹️🎾🥁👟🎹🛹🥩🥤🍿",
