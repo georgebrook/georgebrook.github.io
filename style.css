@@ -1,0 +1,257 @@
+:root {
+  --text: #2f2f2f;
+  --bg: #ffffff;
+  --accent: #010101;
+  --muted: #666;
+  --shadow: #d6d6d6;
+}
+
+[data-theme="dark"] {
+  --text: #eaeaea;
+  --bg: #121212;
+  --accent: #eaeaea;
+  --muted: #aaa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+
+a {
+  color: var(--text);
+}
+
+header svg {
+  width: 40px;
+  height: 40px;
+}
+
+header h1 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.background-noise {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 1.5rem 3rem;
+  background: var(--bg);
+}
+
+h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.2rem;
+  font-family: "Chivo Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+h2 {
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.2rem;
+  margin-top: 2.5rem;
+  font-size: 1.8rem;
+  font-family: "Chivo Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+h3 {
+  margin: 1.5rem 0 0.3rem;
+  font-size: 1.4rem;
+  font-family: "Chivo Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+p {
+  margin: 0;
+}
+
+.intro {
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.intro p {
+  margin: 0;
+}
+
+.image-border img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid var(--bg);
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+
+.meta {
+  font-style: italic;
+}
+
+ul {
+  padding-left: 1.4rem;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.skip-link {
+  position: absolute;
+  top: -3rem;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.6rem 1rem;
+  background: var(--bg);
+  color: var(--text);
+  border: 2px solid var(--accent);
+  border-radius: 6px;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.fun-button {
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  width: 48px;
+  height: 48px;
+  color: var(--text);
+  position: fixed;
+  bottom: 23px;
+  top: 23px;
+  right: 34px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.theme-toggle input {
+  display: none;
+}
+
+.image-toggle {
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  margin: 0;
+  font: inherit;
+}
+
+.image-border {
+  --gradient: linear-gradient(45deg, #48006d, #4d75ff, #66fff5, #23cc68, #e6ff6c);
+  aspect-ratio: 1 / 1;
+  padding: 6px;
+  display: flex;
+  border-radius: 50%;
+  background: var(--gradient);
+  background-size: 300% 300%;
+  animation: gradientFlow 5s ease infinite;
+  transition: animation-duration 0.3s ease;
+  cursor: pointer;
+}
+
+.image-border.clicked {
+  --gradient: linear-gradient(45deg, #ff4e50, #fc913a, #f9d423, #ff6b6b, #ffe259);
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.image-border--mobile {
+  display: none;
+  width: 100px;
+  height: 100px;
+}
+
+@media (max-width: 999px) {
+  .image-border--mobile {
+    display: flex;
+    padding: 3px;
+  }
+
+  .image-border--desktop,
+  .cv-icon {
+    display: none;
+  }
+
+  main {
+    padding: 1.5rem 1rem 3rem;
+    box-shadow: none;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    gap: 20px;
+  }
+
+  .intro {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+
+  .image-border img {
+    width: 100%;
+    height: 100%;
+    border-width: 4px;
+  }
+
+  .fun-button {
+    top: auto;
+    bottom: 26px;
+    right: 23px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image-border {
+    animation: none;
+  }
+}

@@ -5,25 +5,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>George Brook – Front End Developer | CV & Portfolio</title>
+  <title>George Brook – Front End Developer | CV &amp; Portfolio</title>
   <meta name="description"
     content="Explore the CV of George Brook, a Front End developer specializing in accessible, performant, and user-focused web experiences." />
-  <link rel="canonical" href="https://yourdomain.com/" />
+  <link rel="canonical" href="https://georgebrook.github.io/" />
 
-  <meta property="og:title" content="George Brook – Front End Developer | CV & Portfolio" />
+  <meta property="og:title" content="George Brook – Front End Developer | CV &amp; Portfolio" />
   <meta property="og:description"
     content="Explore the CV of George Brook, a Front End developer specializing in accessible, performant, and user-focused web experiences." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://yourdomain.com/" />
-  <meta property="og:image" content="https://yourdomain.com/og-image.jpg" />
+  <meta property="og:url" content="https://georgebrook.github.io/" />
+  <meta property="og:image" content="https://georgebrook.github.io/og-image.jpg" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="George Brook – Front End Developer | CV & Portfolio" />
+  <meta name="twitter:title" content="George Brook – Front End Developer | CV &amp; Portfolio" />
   <meta name="twitter:description"
     content="Explore the CV of George Brook, a Front End developer specializing in accessible, performant, and user-focused web experiences." />
-  <meta name="twitter:image" content="https://yourdomain.com/og-image.jpg" />
+  <meta name="twitter:image" content="https://georgebrook.github.io/og-image.jpg" />
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
 
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -41,7 +42,7 @@
       "@type": "Person",
       "name": "George Brook",
       "jobTitle": "Front End Developer",
-      "url": "https://yourdomain.com/",
+      "url": "https://georgebrook.github.io/",
       "sameAs": [
         "https://linkedin.com/in/georgebrook",
         "https://github.com/georgebrook"
@@ -54,281 +55,17 @@
     }
   </script>
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <style>
-    :root {
-      --text: #2f2f2f;
-      --bg: #ffffff;
-      --accent: #010101;
-      --muted: #666;
-      --shadow: #d6d6d6;
-    }
-
-    [data-theme="dark"] {
-      --text: #eaeaea;
-      --bg: #121212;
-      --accent: #eaeaea;
-      --muted: #aaa;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: "Montserrat", sans-serif;
-      font-optical-sizing: auto;
-      font-style: normal;
-      font-size: 1rem;
-      line-height: 1.6;
-      color: var(--text);
-      background: var(--bg);
-    }
-
-    a {
-      color: var(--text);
-    }
-
-    header svg {
-      width: 40px;
-      height: 40px;
-    }
-
-    header h1 {
-      margin: 0;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .background-noise {
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      pointer-events: none;
-    }
-
-    main {
-      max-width: 1000px;
-      margin: auto;
-      padding: 1.5rem 3rem;
-      background: var(--bg);
-    }
-
-    h1 {
-      font-size: 2.4rem;
-      margin-bottom: 0.2rem;
-      font-family: "Chivo Mono", monospace;
-      font-optical-sizing: auto;
-      font-style: normal;
-    }
-
-    h2 {
-      border-bottom: 2px solid var(--accent);
-      padding-bottom: 0.2rem;
-      margin-top: 2.5rem;
-      font-size: 1.8rem;
-      font-family: "Chivo Mono", monospace;
-      font-optical-sizing: auto;
-      font-style: normal;
-    }
-
-    h3 {
-      margin: 1.5rem 0 0.3rem;
-      font-size: 1.4rem;
-      font-family: "Chivo Mono", monospace;
-      font-optical-sizing: auto;
-      font-style: normal;
-    }
-
-    p {
-      margin: 0;
-    }
-
-    .intro {
-      font-style: italic;
-      display: flex;
-      align-items: center;
-      margin-top: 20px;
-      gap: 20px;
-      padding: 10px 0;
-    }
-
-    .intro p {
-      margin: 0;
-    }
-
-    .image-border img {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      border: 5px solid var(--bg);
-      object-fit: cover;
-      aspect-ratio: 1/1;
-    }
-
-    .meta {
-      font-style: italic;
-    }
-
-    ul {
-      padding-left: 1.4rem;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .fun-button {
-      cursor: pointer;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      user-select: none;
-      width: 48px;
-      height: 48px;
-      color: var(--text);
-      position: fixed;
-      bottom: 23px;
-      top: 23px;
-      right: 34px;
-      border-radius: 10px;
-      background: rgba(255, 255, 255, 0.2);
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-    }
-
-    .font-toggle {
-      right: 100px;
-    }
-
-    .color-toggle {
-      right: 95px;
-    }
-
-    .reset-toggle {
-      right: 202px;
-    }
-
-    .theme-toggle input {
-      display: none;
-    }
-
-    .image-border {
-      --gradient: linear-gradient(45deg, #48006d, #4d75ff, #66fff5, #23cc68, #e6ff6c);
-      aspect-ratio: 1 / 1;
-      padding: 6px;
-      display: flex;
-      border-radius: 50%;
-      background: var(--gradient);
-      background-size: 300% 300%;
-      animation: gradientFlow 5s ease infinite;
-      transition: animation-duration 0.3s ease;
-      cursor: pointer;
-    }
-
-    .image-border.clicked {
-      --gradient: linear-gradient(45deg, #ff4e50, #fc913a, #f9d423, #ff6b6b, #ffe259);
-    }
-
-    @keyframes gradientFlow {
-      0% {
-        background-position: 0% 50%;
-      }
-
-      50% {
-        background-position: 100% 50%;
-      }
-
-      100% {
-        background-position: 0% 50%;
-      }
-    }
-
-    .image-border--mobile {
-      display: none;
-      width: 100px;
-      height: 100px;
-    }
-
-    @media (max-width: 999px) {
-      .image-border--mobile {
-        display: flex;
-        padding: 3px;
-      }
-
-      .image-border--desktop,
-      .cv-icon {
-        display: none;
-      }
-
-      main {
-        padding: 1.5rem 1rem 3rem;
-        box-shadow: none;
-      }
-
-      header h1 {
-        font-size: 1.8rem;
-        line-height: 1.4;
-        gap: 20px;
-      }
-
-      .intro {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-top: 10px;
-      }
-
-      .image-border img {
-        width: 100%;
-        height: 100%;
-        border-width: 4px;
-      }
-
-      .fun-button {
-        top: auto;
-        bottom: 26px;
-        right: 23px;
-      }
-
-      .font-toggle {
-        right: 89px;
-      }
-
-      .color-toggle {
-        right: 85px;
-      }
-
-      .reset-toggle {
-        right: 220px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
-  <canvas class="background-noise"></canvas>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <button id="random-color-btn" class="color-toggle fun-button" aria-label="Randomise font">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-      <path fill="none" stroke="currentColor" stroke-dasharray="28" stroke-dashoffset="28" stroke-linecap="round"
-        stroke-linejoin="round" stroke-width="2" d="M12 3c0 0 7 6 7 12c0 2 -1 6 -7 6M12 3c0 0 -7 6 -7 12c0 2 1 6 7 6">
-        <animate attributeName="stroke-dashoffset" dur="3s" values="28;0;28;" repeatCount="indefinite" />
-      </path>
-
-      <path fill="currentColor" fill-opacity="0"
-        d="M12 3C12 3 15.27 5.81 17.34 9.5L6 18.41C5.21 17.24 5 15.91 5 15C5 9 12 3 12 3Z">
-        <animate attributeName="fill-opacity" dur="3s" values="0;0.3;0" repeatCount="indefinite" />
-      </path>
-    </svg>
-  </button>
+  <canvas class="background-noise" aria-hidden="true"></canvas>
 
   <label class="theme-toggle fun-button" for="themeToggle" aria-label="Toggle dark mode">
     <input type="checkbox" id="themeToggle" />
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
       <g fill="none" stroke="currentColor" stroke-dasharray="4" stroke-dashoffset="4" stroke-linecap="round"
         stroke-linejoin="round" stroke-width="1">
         <path d="M13 4h1.5M13 4h-1.5M13 4v1.5M13 4v-1.5">
@@ -386,20 +123,13 @@
 
   </label>
 
-  <main>
+  <main id="main-content">
     <header>
       <h1>
-        <a href="#" class="image-border image-border--mobile" role="button" aria-pressed="false" onclick="
-    event.preventDefault();
-    const img = this.querySelector('img');
-    const isClicked = this.classList.toggle('clicked');
-    this.setAttribute('aria-pressed', isClicked);
-    img.src = isClicked ? 'me-black-and-white.jpg' : 'me3.webp';
-    img.alt = isClicked ? 'A colour version of me.' : 'An image of me with a great view.';
-  ">
+        <button type="button" class="image-toggle image-border image-border--mobile" aria-pressed="false">
           <img class="image-mobile" src="me3.webp" alt="An image of me with a great view.">
-        </a>
-        <svg class="cv-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        </button>
+        <svg class="cv-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
           <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
             <path stroke-dasharray="64" stroke-dashoffset="64"
               d="M13.5 3l5.5 5.5v11.5c0 0.55 -0.45 1 -1 1h-12c-0.55 0 -1 -0.45 -1 -1v-16c0 -0.55 0.45 -1 1 -1Z">
@@ -421,279 +151,137 @@
         George Brook
       </h1>
       <div class="intro">
-        <a href="#" class="image-border image-border--desktop" role="button" aria-pressed="false" onclick="
-    event.preventDefault();
-    const img = this.querySelector('img');
-    const isClicked = this.classList.toggle('clicked');
-    this.setAttribute('aria-pressed', isClicked);
-    img.src = isClicked ? 'me-black-and-white.jpg' : 'me3.webp';
-    img.alt = isClicked ? 'A colour version of me.' : 'An image of me with a great view.';
-  ">
+        <button type="button" class="image-toggle image-border image-border--desktop" aria-pressed="false">
           <img class="image-mobile" src="me3.webp" alt="An image of me with a great view.">
-        </a>
+        </button>
         <div class="blurb">
           <p>
 I’m a front-end developer who enjoys building fast, accessible websites with clean, well-structured code. I care about good CSS, thoughtful UI, and making things work smoothly for users and developers alike. I like working with design systems, improving team standards, and exploring how tools like AI can support front-end work.
           </p>
           <br>
           <p>
-            Most recent personal public project: <a
+            Most recent fiddle: <a
               href="https://devtools-ecru.vercel.app">https://devtools-ecru.vercel.app</a>
           </p>
         </div>
       </div>
+    </header>
 
-      <section>
-        <h2>Education</h2>
-        <p><strong>Bachelor of Science (Physics, Upper Second Class Honours)</strong><br>University of Bath — 2012</p>
-        <p><em>Dissertation: Investigating Noise and Underwater Acoustics in the Deep Sea.
-            Built MATLAB algorithms to analyze signal data.</em>
-        </p>
-      </section>
+    <section>
+      <h2>Education</h2>
+      <p><strong>Bachelor of Science (Physics, Upper Second Class Honours)</strong><br>University of Bath — 2012</p>
+      <p><em>Dissertation: Investigating Noise and Underwater Acoustics in the Deep Sea.
+          Built MATLAB algorithms to analyze signal data.</em>
+      </p>
+    </section>
 
-      <section>
-        <h2>Professional Experience</h2>
+    <section>
+      <h2>Professional Experience</h2>
 
-        <h3>Catch Digital (London, UK – Remote)</h3>
-        <p><strong>Senior Front-End Developer</strong> · March 2022 – May 2025</p>
-        <ul>
-          <li>Designed and implemented modular front-end systems across enterprise-scale websites.</li>
-          <li>Spearheaded the adoption of atomic design principles and scalable component libraries using Storybook and
-            modern CSS architecture (BEM).</li>
-          <li>Optimized page performance across 20+ websites, reducing load times through code splitting and
-            performance-first tooling.</li>
-          <li>Modernized build pipelines with Webpack, GitHub Actions, and CI/CD workflows, improving developer
-            efficiency.</li>
-          <li>Led the integration of headless CMS platforms and third-party APIs, including secure authentication flows
-            with JWT.</li>
-          <li>Built reusable React components for e-commerce tools like shopping carts and dynamic product filters.</li>
-          <li>Mentored junior developers on JavaScript best practices and accessibility standards.</li>
-          <li>Regularly led client demos and translated complex technical solutions into business-aligned outcomes.</li>
-        </ul>
+      <h3>Catch Digital (London, UK – Remote)</h3>
+      <p><strong>Senior Front-End Developer</strong> · March 2022 – May 2025</p>
+      <ul>
+        <li>Designed and implemented modular front-end systems across enterprise-scale websites.</li>
+        <li>Spearheaded the adoption of atomic design principles and scalable component libraries using Storybook and
+          modern CSS architecture (BEM).</li>
+        <li>Optimized page performance across 20+ websites, reducing load times through code splitting and
+          performance-first tooling.</li>
+        <li>Modernized build pipelines with Webpack, GitHub Actions, and CI/CD workflows, improving developer
+          efficiency.</li>
+        <li>Led the integration of headless CMS platforms and third-party APIs, including secure authentication flows
+          with JWT.</li>
+        <li>Built reusable React components for e-commerce tools like shopping carts and dynamic product filters.</li>
+        <li>Mentored junior developers on JavaScript best practices and accessibility standards.</li>
+        <li>Regularly led client demos and translated complex technical solutions into business-aligned outcomes.</li>
+      </ul>
 
-        <p><strong>Notable Projects/Clients:</strong></p>
-        <p><em>My Business Stream (Scottish Water), IOP, Norton Abrasives, Edrington Digital Platform, SES, IAB UK,
-            TTTech Auto, Framestore, Ashmore Group</p>
-        <small><strong>Reason for Leaving:</strong> Company restructure and merger.</small>
+      <p><strong>Notable Projects/Clients:</strong></p>
+      <p><em>My Business Stream (Scottish Water), IOP, Norton Abrasives, Edrington Digital Platform, SES, IAB UK,
+          TTTech Auto, Framestore, Ashmore Group</em></p>
+      <small><strong>Reason for Leaving:</strong> Company restructure and merger.</small>
 
-        <h3>Zoocha Ltd (Hertford, UK – Remote)</h3>
-        <p><strong>Mid → Senior Front-End Developer</strong> · March 2014 – February 2022</p>
-        <ul>
-          <li>Delivered front-end solutions for high-traffic websites, including public sector and finance projects.
-          </li>
-          <li>Led compliance efforts for accessibility (AAA/WCAG) and legal standards.</li>
-          <li>Developed prototypes and MVPs using the latest front-end stacks.</li>
-          <li>Advocated for and implemented atomic design systems and reusable UI components.</li>
-          <li>Coached team members on writing scalable, maintainable code using modern HTML, CSS, and JavaScript
-            standards.</li>
-        </ul>
-        <p><strong>Notable Projects/Clients:</strong></p>
-        <p><em>Greater London Authority, TalkLondon, Ofsted Reports, FCA, Falmouth University, Visit Britain, Visit
-            Jersey, Ofsted Parent View</p>
-        <small><strong>Reason for Leaving:</strong> Transition to UK-only office model while based in South Africa.</small>
-      </section>
+      <h3>Zoocha Ltd (Hertford, UK – Remote)</h3>
+      <p><strong>Mid → Senior Front-End Developer</strong> · March 2014 – February 2022</p>
+      <ul>
+        <li>Delivered front-end solutions for high-traffic websites, including public sector and finance projects.
+        </li>
+        <li>Led compliance efforts for accessibility (AAA/WCAG) and legal standards.</li>
+        <li>Developed prototypes and MVPs using the latest front-end stacks.</li>
+        <li>Advocated for and implemented atomic design systems and reusable UI components.</li>
+        <li>Coached team members on writing scalable, maintainable code using modern HTML, CSS, and JavaScript
+          standards.</li>
+      </ul>
+      <p><strong>Notable Projects/Clients:</strong></p>
+      <p><em>Greater London Authority, TalkLondon, Ofsted Reports, FCA, Falmouth University, Visit Britain, Visit
+          Jersey, Ofsted Parent View</em></p>
+      <small><strong>Reason for Leaving:</strong> Transition to UK-only office model while based in South Africa.</small>
+    </section>
 
-      <section>
-        <h2>Technical Proficiency</h2>
-        <ul>
-          <li><strong>Languages &amp; Frameworks</strong><br> React, Next.js, Vue.js, Svelte, TypeScript, JavaScript
-            (ES6+), HTML5, CSS3, SASS, Tailwind CSS, jQuery, Twig</li>
-          <li><strong>Component &amp; UI Development</strong><br> Storybook, Atomic Design, BEM methodology, Accessible
-            UI
-            (WCAG 2.1/2.2), Semantic HTML</li>
-          <li><strong>Testing &amp; Quality Assurance</strong><br> Jest, React Testing Library, Playwright, Pa11y,
-            Lighthouse, ESLint, Stylelint, Prettier</li>
-          <li><strong>Build &amp; Automation Tools</strong><br> npm, Yarn, Webpack, Vite, Gulp, Grunt, Lint-Staged</li>
-          <li><strong>Version Control &amp; Collaboration</strong><br> Git, GitHub, Bitbucket, Azure DevOps, Jira,
-            Confluence, Agile/Scrum, Code Reviews, Mentorship</li>
-          <li><strong>CMS &amp; Platforms</strong><br> Drupal, WordPress, Prismic</li>
-          <li><strong>DevOps &amp; Backend</strong><br> PHP, PHPStan, Composer, MySQL, Docker, DDEV, Linux, NGINX,
-            Jenkins,
-            AWS (Amplify, EC2, S3), Acquia Cloud, Pantheon, DigitalOcean, Vercel</li>
-          <li><strong>Analytics &amp; Monitoring</strong><br> Google Analytics, Sentry</li>
-        </ul>
-      </section>
+    <section>
+      <h2>Technical Proficiency</h2>
+      <ul>
+        <li><strong>Languages &amp; Frameworks</strong><br> React, Next.js, Vue.js, Svelte, TypeScript, JavaScript
+          (ES6+), HTML5, CSS3, SASS, Tailwind CSS, jQuery, Twig</li>
+        <li><strong>Component &amp; UI Development</strong><br> Storybook, Atomic Design, BEM methodology, Accessible
+          UI
+          (WCAG 2.1/2.2), Semantic HTML</li>
+        <li><strong>Testing &amp; Quality Assurance</strong><br> Jest, React Testing Library, Playwright, Pa11y,
+          Lighthouse, ESLint, Stylelint, Prettier</li>
+        <li><strong>Build &amp; Automation Tools</strong><br> npm, Yarn, Webpack, Vite, Gulp, Grunt, Lint-Staged</li>
+        <li><strong>Version Control &amp; Collaboration</strong><br> Git, GitHub, Bitbucket, Azure DevOps, Jira,
+          Confluence, Agile/Scrum, Code Reviews, Mentorship</li>
+        <li><strong>CMS &amp; Platforms</strong><br> Drupal, WordPress, Prismic</li>
+        <li><strong>DevOps &amp; Backend</strong><br> PHP, PHPStan, Composer, MySQL, Docker, DDEV, Linux, NGINX,
+          Jenkins,
+          AWS (Amplify, EC2, S3), Acquia Cloud, Pantheon, DigitalOcean, Vercel</li>
+        <li><strong>Analytics &amp; Monitoring</strong><br> Google Analytics, Sentry</li>
+      </ul>
+    </section>
 
-      <section class="personal-info">
-        <h2>More About Me</h2>
-        <p>
-          When I’m not coding, I enjoy endurance running, competitive and recreational tennis, and perfecting my
-          homemade lasagne recipe. I am also passionate about art and music, and love exploring new creative outlets.
-        </p>
-        <ul>
-          <li><a href="https://codepen.io/georgebrook/pen/mqexXB" target="_blank" rel="noopener">Codepen</a></li>
-          <li><a href="https://github.com/georgebrook" target="_blank" rel="noopener">Github</a></li>
-          <li><a href="https://imgur.com/a/artwork-drf0g" target="_blank" rel="noopener">Artwork Portfolio</a></li>
-          <li><a href="https://soundcloud.com/zzxxccii" target="_blank" rel="noopener">Music</a></li>
-          <li><a href="https://www.drupal.org/u/georgebrook" target="_blank" rel="noopener">Drupal Profile</a></li>
-          <li><a href="https://www.linkedin.com/in/georgebrook/" target="_blank" rel="noopener">LinkedIn</a></li>
-        </ul>
-      </section>
+    <section>
+      <h2>Projects I Have Worked on/lead</h2>
+      <ul>
+        <li><a href="https://www.london.gov.uk/" target="_blank" rel="noopener">Greater London Authority (D7)</a></li>
+        <li><a href="https://www.london.gov.uk/talk-london/" target="_blank" rel="noopener">TalkLondon (D8/9)</a></li>
+        <li><a href="https://reports.ofsted.gov.uk/" target="_blank" rel="noopener">Ofsted Reports (Slim PHP with D8 content API)</a></li>
+        <li><a href="https://parentview.ofsted.gov.uk/" target="_blank" rel="noopener">Ofsted Parent View (D8/9)</a></li>
+        <li><a href="https://www.fca.org.uk/" target="_blank" rel="noopener">Financial Conduct Authority (D9)</a></li>
+        <li><a href="https://www.falmouth.ac.uk/" target="_blank" rel="noopener">Falmouth University (D9)</a></li>
+        <li><a href="https://www.visitbritain.com/" target="_blank" rel="noopener">Visit Britain (D8/9)</a></li>
+        <li><a href="https://www.bfbs.com/" target="_blank" rel="noopener">BFBS (D7/8 multisite)</a></li>
+        <li><a href="https://www.royalmarsden.org/" target="_blank" rel="noopener">The Royal Marsden Cancer Charity (D8)</a></li>
+        <li><a href="https://www.jersey.com/" target="_blank" rel="noopener">Visit Jersey (D7/8)</a></li>
+        <li><a href="https://www.nationalforest.org/" target="_blank" rel="noopener">National Forest (D8)</a></li>
+        <li><a href="https://www.sc.qa/" target="_blank" rel="noopener">SC.QA (D8/9)</a></li>
+        <li><a href="https://www.zoocha.com/" target="_blank" rel="noopener">Zoocha Ltd. (D8/9)</a></li>
+        <li>
+          <small><em>and more</em></small>
+        </li>
+      </ul>
+    </section>
 
-      <footer class="site-footer">
-        <p>Thank you for visiting my site. I look forward to connecting!</p>
-      </footer>
+    <section class="personal-info">
+      <h2>More About Me</h2>
+      <p>
+        When I’m not coding, I enjoy endurance running, competitive and recreational tennis, and perfecting my
+        homemade lasagne recipe. I am also passionate about art and music, and love exploring new creative outlets.
+      </p>
+      <ul>
+        <li><a href="https://codepen.io/georgebrook/pen/mqexXB" target="_blank" rel="noopener">Codepen</a></li>
+        <li><a href="https://github.com/georgebrook" target="_blank" rel="noopener">Github</a></li>
+        <li><a href="https://imgur.com/a/artwork-drf0g" target="_blank" rel="noopener">Artwork Portfolio</a></li>
+        <li><a href="https://soundcloud.com/zzxxccii" target="_blank" rel="noopener">Music</a></li>
+        <li><a href="https://www.drupal.org/u/georgebrook" target="_blank" rel="noopener">Drupal Profile</a></li>
+        <li><a href="https://www.linkedin.com/in/georgebrook/" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </section>
+
+    <footer class="site-footer">
+      <p>Thank you for visiting my site. I look forward to connecting!</p>
+    </footer>
   </main>
 
-  <script>
-    const randomColorBtn = document.getElementById('random-color-btn');
-    const body = document.body;
-    const headings = document.getElementsByTagName('h2');
-    const buttons = document.querySelectorAll('.fun-button');
-
-    const defaultColor = getComputedStyle(body).color;
-
-    function getRandomColor() {
-      const letters = '0123456789ABCDEF';
-      return '#' + Array.from({ length: 6 })
-        .map(() => letters[Math.floor(Math.random() * 16)])
-        .join('');
-    }
-
-    randomColorBtn.addEventListener('click', () => {
-      const color = getRandomColor();
-      body.style.color = color;
-
-      for (let heading of headings) {
-        heading.style.borderColor = color;
-      }
-
-      for (let button of buttons) {
-        button.style.color = color;
-      }
-    });
-
-    const toggleButton = document.getElementById('themeToggle');
-    const html = document.documentElement;
-
-    function updateMetaThemeColor(theme) {
-      const themeColor = theme === 'dark' ? '#121212' : '#ffffff';
-      let metaTag = document.querySelector('meta[name="theme-color"]');
-
-      if (!metaTag) {
-        metaTag = document.createElement('meta');
-        metaTag.name = 'theme-color';
-        document.head.appendChild(metaTag);
-      }
-
-      metaTag.setAttribute('content', themeColor);
-    }
-
-    const applyTheme = (theme) => {
-      html.setAttribute('data-theme', theme);
-      updateMetaThemeColor(theme);
-    };
-
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-
-    let storedTheme = localStorage.getItem('theme');
-    if (storedTheme) {
-      applyTheme(storedTheme);
-    } else {
-      applyTheme(systemPrefersDark.matches ? 'dark' : 'light');
-    }
-
-    toggleButton.addEventListener('click', () => {
-      const current = html.getAttribute('data-theme');
-      const newTheme = current === 'dark' ? 'light' : 'dark';
-      applyTheme(newTheme);
-      localStorage.setItem('theme', newTheme);
-    });
-
-    systemPrefersDark.addEventListener('change', (e) => {
-      if (!localStorage.getItem('theme')) {
-        applyTheme(e.matches ? 'dark' : 'light');
-      }
-    });
-
-    const canvas = document.querySelector('.background-noise');
-    const ctx = canvas.getContext('2d');
-
-    const dotSize = 1;
-    const density = 0.25;
-    let imgData;
-
-    // Check for desktop
-    const isDesktop = () => window.innerWidth >= 1024;
-
-    function hexToRGBA(hex) {
-      hex = hex.replace('#', '');
-      if (hex.length === 3) {
-        hex = hex.split('').map(char => char + char).join('');
-      }
-      const r = parseInt(hex.substring(0, 2), 16);
-      const g = parseInt(hex.substring(2, 4), 16);
-      const b = parseInt(hex.substring(4, 6), 16);
-      const a = 255;
-      return (a << 24) | (r << 16) | (g << 8) | b;
-    }
-
-    function drawNoise() {
-      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-      const bg = hexToRGBA(isDark ? '#1d1d1d' : '#f8f8f8');
-      const fg = hexToRGBA(isDark ? '#2d2d2d' : '#dddddd');
-
-      const cols = Math.ceil(canvas.width / dotSize);
-      const rows = Math.ceil(canvas.height / dotSize);
-      const buf = imgData.data;
-
-      for (let y = 0; y < rows; y++) {
-        for (let x = 0; x < cols; x++) {
-          const startX = x * dotSize;
-          const startY = y * dotSize;
-
-          const color = Math.random() < density ? fg : bg;
-
-          for (let dy = 0; dy < dotSize; dy++) {
-            for (let dx = 0; dx < dotSize; dx++) {
-              const px = startX + dx;
-              const py = startY + dy;
-              if (px >= canvas.width || py >= canvas.height) continue;
-
-              const pixelIndex = (py * canvas.width + px) * 4;
-              buf[pixelIndex] = (color >> 16) & 0xFF;
-              buf[pixelIndex + 1] = (color >> 8) & 0xFF;
-              buf[pixelIndex + 2] = color & 0xFF;
-              buf[pixelIndex + 3] = (color >> 24) & 0xFF;
-            }
-          }
-        }
-      }
-      ctx.putImageData(imgData, 0, 0);
-    }
-
-    function resize() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      imgData = ctx.createImageData(canvas.width, canvas.height);
-      ctx.imageSmoothingEnabled = false;
-    }
-
-    // Only start noise effect on desktop
-    if (isDesktop()) {
-      resize();
-      drawNoise();
-      loop();
-    }
-
-    // Update on resize if still desktop
-    window.addEventListener('resize', () => {
-      if (isDesktop()) {
-        resize();
-        drawNoise();
-      }
-    });
-
-    function loop() {
-      drawNoise();
-      requestAnimationFrame(loop);
-    }
-
-    console.log(
-      "%c🧑🏼‍💻🕹️🎾🥁👟🎹🛹🥩🥤🍿",
-      "font-size: 100px;"
-    );
-  </script>
+  <script src="/script.js" defer></script>
 </body>
 
 </html>
