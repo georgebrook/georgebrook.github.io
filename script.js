@@ -1,15 +1,3 @@
-const imageToggles = document.querySelectorAll('.image-toggle');
-
-imageToggles.forEach((toggle) => {
-  toggle.addEventListener('click', () => {
-    const img = toggle.querySelector('img');
-    const isClicked = toggle.classList.toggle('clicked');
-    toggle.setAttribute('aria-pressed', isClicked);
-    img.src = isClicked ? 'me-black-and-white.jpg' : 'me3.webp';
-    img.alt = isClicked ? 'A black and white version of me.' : 'An image of me with a great view.';
-  });
-});
-
 const toggleButton = document.getElementById('themeToggle');
 const html = document.documentElement;
 

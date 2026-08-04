@@ -164,14 +164,6 @@ a:hover {
   display: none;
 }
 
-.image-toggle {
-  appearance: none;
-  -webkit-appearance: none;
-  border: none;
-  margin: 0;
-  font: inherit;
-}
-
 .image-border {
   --gradient: linear-gradient(45deg, #48006d, #4d75ff, #66fff5, #23cc68, #e6ff6c);
   aspect-ratio: 1 / 1;
@@ -182,11 +174,6 @@ a:hover {
   background-size: 300% 300%;
   animation: gradientFlow 5s ease infinite;
   transition: animation-duration 0.3s ease;
-  cursor: pointer;
-}
-
-.image-border.clicked {
-  --gradient: linear-gradient(45deg, #ff4e50, #fc913a, #f9d423, #ff6b6b, #ffe259);
 }
 
 @keyframes gradientFlow {
